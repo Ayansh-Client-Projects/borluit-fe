@@ -1,4 +1,4 @@
-import { default as ComingSoonPage } from "./page/coming-soon";
+import { ComingSoonPage } from "@page/index";
 
 const App = () => {
   return <ComingSoonPage />;
