@@ -7,4 +7,4 @@ coverage
 
 # Ignore config files
 **/*.cjs
-**/*.config.js
+**/*.config.*
