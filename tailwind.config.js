@@ -5,7 +5,17 @@ export default {
 		"./src/**/*.{js,ts,jsx,tsx}"
 	],
   theme: {
-    extend: {},
+		fontFamily: {
+			'display': ['"Clash Display"', 'sans-serif']
+		},
+    extend: {
+			backgroundImage: {
+				'hero': "url('/src/assets/img/image-hero.png')"
+			},
+			colors: {
+				'canopy': '#55634B',
+			}
+		},
   },
   plugins: ["prettier-plugin-tailwindcss"],
 }

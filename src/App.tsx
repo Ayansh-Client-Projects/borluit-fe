@@ -1,5 +1,7 @@
+import { ComingSoonPage } from "@page/index";
+
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">hello world</h1>;
+  return <ComingSoonPage />;
 };
 
 export default App;
