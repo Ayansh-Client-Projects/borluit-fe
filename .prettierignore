@@ -5,4 +5,6 @@ coverage
 # Ignore all HTML files:
 **/*.html
 
+# Ignore config files
 **/*.cjs
+**/*.config.js
