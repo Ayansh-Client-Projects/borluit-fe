@@ -7,4 +7,9 @@
     font-family: "Clash Display";
     src: url(/src/assets/fonts/ClashDisplay_Complete/TTF/ClashDisplay-Variable.ttf);
   }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url(/src/assets/fonts/Satoshi/TTF/Satoshi-Variable.ttf);
+  }
 }

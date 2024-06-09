@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import { ReactElement } from "react";
-import ComingSoon from "./coming-soon";
 
 const Page = (props: { children: ReactElement }) => {
   return (
@@ -11,8 +10,4 @@ const Page = (props: { children: ReactElement }) => {
   );
 };
 
-export const ComingSoonPage = () => (
-  <Page>
-    <ComingSoon />
-  </Page>
-);
+export default Page;

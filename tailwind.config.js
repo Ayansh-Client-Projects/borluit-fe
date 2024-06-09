@@ -6,7 +6,8 @@ export default {
 	],
   theme: {
 		fontFamily: {
-			'display': ['"Clash Display"', 'sans-serif']
+			'display': ['"Clash Display"', 'sans-serif'],
+			'satoshi': ['Satoshi', 'sans-serif']
 		},
     extend: {
 			backgroundImage: {
@@ -14,6 +15,7 @@ export default {
 			},
 			colors: {
 				'canopy': '#55634B',
+				'perrywinkle': '#687D9B'
 			}
 		},
   },

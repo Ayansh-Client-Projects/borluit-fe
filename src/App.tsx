@@ -1,7 +1,7 @@
-import { ComingSoonPage } from "@page/index";
+import HomePage from "@page/home";
 
 const App = () => {
-  return <ComingSoonPage />;
+  return <HomePage />;
 };
 
 export default App;

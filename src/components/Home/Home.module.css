@@ -1,0 +1,35 @@
+@media screen and (max-width: 600px) {
+  .background-slide {
+    animation-duration: 3s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+  }
+
+  .content-slide {
+    opacity: 0;
+    animation-duration: 3s;
+    animation-name: slideUpAndFadeIn;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    background-position: top 0px left 75%;
+  }
+  to {
+    background-position: top 0px left 55%;
+  }
+}
+
+@keyframes slideUpAndFadeIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}

@@ -1,3 +1,5 @@
+import Page from "@/container/page";
+
 const ComingSoon = () => {
   return (
     <section className="relative h-screen bg-hero bg-cover bg-[top_right_40%] bg-no-repeat lg:bg-center">
@@ -8,5 +10,11 @@ const ComingSoon = () => {
     </section>
   );
 };
+
+export const ComingSoonPage = () => (
+  <Page>
+    <ComingSoon />
+  </Page>
+);
 
 export default ComingSoon;
