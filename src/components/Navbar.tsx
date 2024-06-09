@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white w-full h-14 justify-center gap-x-56 lg:h-28 lg:bg-white/[0.8] flex flex-row items-center lg:justify-center lg:gap-x-96 fixed top-0 z-50 shadow-md">
+      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-white shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.8]">
         <a href="#">
           <LogoSVG />
         </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <ul className="hidden lg:flex flex-row gap-x-24">
+        <ul className="hidden flex-row gap-x-24 lg:flex">
           {links.map((link) => (
             <li key={link.title}>
               <Anchor {...link} />
@@ -60,7 +60,7 @@ const Navbar = () => {
       </nav>
       {showMenu && (
         <ul
-          className={`lg:hidden h-screen w-screen top-0 pt-24 bg-white flex flex-col items-center gap-y-16 absolute z-40`}
+          className={`absolute top-0 z-40 flex h-screen w-screen flex-col items-center gap-y-16 bg-white pt-24 lg:hidden`}
         >
           {links.map((link) => (
             <li key={link.title}>
@@ -77,7 +77,7 @@ const Anchor = (props: Link) => {
   return (
     <a
       href={props.href}
-      className="uppercase font-display font-medium text-gray-800"
+      className="font-display font-medium uppercase text-gray-800"
     >
       {props.title}
     </a>
