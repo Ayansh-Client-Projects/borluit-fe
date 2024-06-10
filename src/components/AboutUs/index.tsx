@@ -6,7 +6,7 @@ const AboutUs = () => {
         <h2 className="font-display text-2xl font-semibold uppercase tracking-widest text-canopy">
           About Us
         </h2>
-        <p className="text-perrywinkle tracking-wider">
+        <p className="text-perrywinkle font-satoshi tracking-wider">
           Founded in 2015 amidst the lush landscapes of Pengeree, Tinsukia,
           Assam, Borluit Tea embodies a legacy of excellence in tea
           craftsmanship. Nestled in the heart of the renowned Assam region, we
