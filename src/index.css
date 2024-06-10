@@ -12,4 +12,10 @@
     font-family: "Satoshi";
     src: url(/src/assets/fonts/Satoshi/TTF/Satoshi-Variable.ttf);
   }
+
+  @font-face {
+    font-family: "Palanquin Dark";
+    font-weight: 400;
+    src: url(/src/assets//fonts/PalanquinDark//TTF/PalanquinDark-Regular.ttf);
+  }
 }
