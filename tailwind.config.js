@@ -17,7 +17,9 @@ export default {
 			},
 			colors: {
 				'canopy': '#55634B',
-				'perrywinkle': '#687D9B'
+				'perrywinkle': '#687D9B',
+				'wine': '#694451',
+				'honey': '#C1892C'
 			}
 		},
   },
