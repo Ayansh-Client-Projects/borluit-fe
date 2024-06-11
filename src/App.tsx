@@ -5,6 +5,8 @@ import AboutUsPage from "@page/about-us";
 import MissionVisionPage from "@page/mission-vision";
 import CSPage from "@page/c-s";
 import ReviewPage from "@page/review";
+import ContactUs from "@components/ContactUs";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
       <MissionVisionPage />
       <CSPage />
       <ReviewPage />
+      <ContactUs />
+      <Footer />
     </>
   );
 };

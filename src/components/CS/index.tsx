@@ -57,10 +57,10 @@ const slist = [
 
 const CSComp = () => {
   return (
-    <section className="space-y-16 bg-[#F0F0F0]">
-      <section className="space-y-8">
+    <section className="space-y-16 bg-[#F0F0F0] lg:space-y-0 lg:p-32">
+      <section className="space-y-8 lg:space-y-16">
         <Header title="Distinctive characteristics" />
-        <div className="grid place-items-center space-y-6">
+        <div className="grid place-items-center space-y-6 lg:flex lg:items-start lg:justify-center lg:gap-x-4 lg:space-y-0">
           {clist.map((item) => {
             return (
               <div
@@ -76,9 +76,9 @@ const CSComp = () => {
           })}
         </div>
       </section>
-      <section className="space-y-8">
+      <section className="space-y-8 lg:space-y-16 lg:pt-[240px]">
         <Header title="our stats"></Header>
-        <div className="grid place-items-center space-y-6">
+        <div className="grid place-items-center space-y-6 lg:flex lg:items-start lg:justify-center lg:gap-x-4 lg:space-y-0">
           {slist.map((item) => {
             return (
               <div
@@ -97,7 +97,7 @@ const CSComp = () => {
 
 export const Header = (props: { title: string }) => {
   return (
-    <h2 className="text-center font-display text-2xl font-semibold uppercase tracking-widest text-canopy">
+    <h2 className="text-center font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
       {props.title}
     </h2>
   );

@@ -4,7 +4,7 @@ import styles from "./Home.module.css";
 const Home = () => {
   return (
     <section
-      className={`${clsx("grid h-screen place-items-center bg-hero bg-cover px-6 md:bg-right-top", styles["background-slide"])}`}
+      className={`${clsx("grid h-screen place-items-center bg-hero bg-cover px-6 md:bg-right-top lg:justify-start lg:px-32", styles["background-slide"])}`}
     >
       <Hero />
     </section>
@@ -13,11 +13,16 @@ const Home = () => {
 
 const Hero = () => {
   return (
-    <article className={clsx("space-y-4 pr-8", styles["content-slide"])}>
-      <h1 className="font-display text-3xl font-bold tracking-wider text-canopy">
+    <article
+      className={clsx(
+        "space-y-4 pr-8 lg:max-w-[600px]",
+        styles["content-slide"],
+      )}
+    >
+      <h1 className="font-display text-3xl font-bold tracking-wider text-canopy lg:text-6xl">
         From our tea <br /> gardens directly <br /> to your cup
       </h1>
-      <p className="font-satoshi text-perrywinkle tracking-wider">
+      <p className="font-satoshi tracking-wider text-[#303030]">
         Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. In
         commodo enim sit amet magna semper lacinia. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. In commodo enim sit amet.

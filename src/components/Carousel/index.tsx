@@ -1,31 +1,59 @@
-import TeaImg from "@/assets/img/tea.png";
+import Carousel from "react-multi-carousel";
+import AvatarImg from "@/assets/img/imageavatar.png";
+import styles from "./Carousel.module.css";
 
-const Carousel = (props: { cards: JSX.Element[] }) => {
-  return <div>{props.cards}</div>;
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 1024, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
 };
 
-export const items = [
-  {
-    img: TeaImg,
-    title: "Black Tea",
-  },
-  {
-    img: TeaImg,
-    title: "Green Tea",
-  },
-  {
-    img: TeaImg,
-    title: "Red Tea",
-  },
-];
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
 
-export const Card = (props: { img: string; title: string }) => {
+const MyComp = () => {
   return (
-    <div className="">
-      <img src={props.img} alt={props.title} className="size-[327px]" />
-      <span className="text-xl font-[500] capitalize">{props.title}</span>
+    <Carousel
+      responsive={responsive}
+      swipeable={true}
+      draggable={true}
+      showDots={true}
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      partialVisible={false}
+      dotListClass={styles["custom-dot-list-style"]}
+    >
+      {list.map((_, idx) => (
+        <Card key={idx} />
+      ))}
+    </Carousel>
+  );
+};
+
+const Card = () => {
+  return (
+    <div className="mx-4 flex min-h-80 flex-col items-center gap-y-4 rounded-2xl bg-white px-4 py-6 lg:mx-8 lg:max-w-[565px]">
+      <img src={AvatarImg} className="size-20 rounded-full" />
+      <p className="font-satoshi text-perrywinkle text-center">
+        &quot;Excellent teas. We have been having it for over a year now and
+        absolutely love the taste. Online buying of exclusive teas is very
+        smooth & easy. Thank you.&quot;
+      </p>
+      <div>
+        <p className="text-wine text-center font-display text-2xl font-semibold tracking-widest">
+          Virat
+        </p>
+        <p className="font-display text-2xl font-medium text-[#303030]">
+          Green Tea
+        </p>
+      </div>
     </div>
   );
 };
 
-export default Carousel;
+export default MyComp;

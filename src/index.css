@@ -19,3 +19,40 @@
     src: url(/src/assets//fonts/PalanquinDark//TTF/PalanquinDark-Regular.ttf);
   }
 }
+
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: #303030 !important;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px !important;
+  height: 10px !important;
+  margin-right: 12px;
+  border: none !important;
+}
+
+.react-multiple-carousel__arrow {
+  border: 1.5px solid #55634b !important;
+  background-color: transparent !important;
+
+  &::before {
+    color: #55634b !important;
+  }
+
+  &:hover {
+    transform: scale(1.25);
+    background-color: #55634bad !important;
+
+    & {
+      border: none !important;
+    }
+
+    &::before {
+      color: white !important;
+    }
+  }
+}

@@ -1,17 +1,18 @@
+import clsx from "clsx";
 import { ReactElement } from "react";
 
 const circularCardTexts = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo enim sit amet magna semper lacinia.",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo enim sit amet magna semper lacinia.",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo enim sit amet magna semper lacinia.",
+  "Celebrate Assam's diverse flavours and cultural heritage through our carefully crafted tea blends, honouring centuries-old traditions and showcasing the region's unique terroir",
+  "Embrace eco-friendly methods at every stage of tea production, from sustainable farming practices to environmentally conscious packaging, minimizing our ecological footprint and preserving the natural beauty of Assam's tea-growing landscapes.",
+  "Uplift local communities by partnering with small-scale tea growers, providing fair wages, promoting education and healthcare initiatives, and empowering individuals to thrive economically while preserving their cultural heritage and way of life.",
 ];
 
 const MissionVision = () => {
   const textClasses =
-    "text-perrywinkle text-center font-display font-medium tracking-wider";
+    "text-perrywinkle text-center font-display font-medium tracking-wider lg:max-w-[920px] lg:text-center";
 
   return (
-    <section className="space-y-16 bg-[#F0F0F0] px-6 pt-16 shadow-inner">
+    <section className="space-y-16 bg-[#F0F0F0] px-6 pt-16 shadow-inner lg:space-y-32 lg:p-32 lg:shadow-none">
       <section className="space-y-9">
         <Card header="Our Vision">
           <p className={textClasses}>
@@ -31,12 +32,15 @@ const MissionVision = () => {
       <section className="space-y-5">
         <Card header="Our Mission">
           <p className={textClasses}>
-            Borluit Tea strives to perfect the craft of Assam tea, capturing its
-            unique flavors and cultural heritage in every brew.
+            At Borluit Tea, our mission is to deliver the finest Assam teas that
+            embody the rich heritage and traditions of the region. We are
+            dedicated to maintaining the highest standards of quality and
+            sustainability, ensuring that each cup of tea brings joy and
+            well-being to our customers
           </p>
         </Card>
       </section>
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col items-center lg:flex-row lg:justify-center">
         {circularCardTexts.map((text, index) => (
           <CardCircular
             text={text}
@@ -51,12 +55,22 @@ const MissionVision = () => {
 };
 
 const Card = (props: { header: string; children: ReactElement }) => {
+  let content = "before:content-['our_vision']";
+  if (props.header.toLocaleLowerCase() === "our mission") {
+    content = "before:content-['our_mission']";
+  }
+
   return (
     <section className="space-y-9">
-      <h2 className="relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:opacity-10 before:content-['our_vision']">
+      <h2
+        className={clsx(
+          "relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:opacity-10 lg:text-4xl",
+          content,
+        )}
+      >
         {props.header}
       </h2>
-      {props.children}
+      <div className="lg:grid lg:place-items-center">{props.children}</div>
     </section>
   );
 };
@@ -66,17 +80,35 @@ const CardCircular = (props: {
   classes: string;
   position: number;
 }) => {
+  let translateClass =
+    "-translate-y-[0px] lg:-translate-x-[0px] lg:-translate-y-[0px]";
+  switch (props.position) {
+    case 1:
+      translateClass =
+        "-translate-y-[24px] lg:-translate-x-[24px] lg:-translate-y-[0px]";
+      break;
+    case 2:
+      translateClass =
+        "-translate-y-[48px] lg:-translate-x-[48px] lg:-translate-y-[0px]";
+      break;
+    case 3:
+      translateClass =
+        "-translate-y-[72px] lg:-translate-x-[72px] lg:-translate-y-[0px]";
+      break;
+    default:
+      break;
+  }
+
   return (
     <div
-      className={
-        "grid size-[250px] place-items-center rounded-full border-4 border-[#55634B] border-opacity-30 px-4 text-center"
-      }
-      style={{
-        transform:
-          props.position > 0 ? `translateY(-${24 * props.position}px)` : "none",
-      }}
+      className={clsx(
+        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634B] border-opacity-30 px-4 text-center hover:bg-canopy hover:bg-opacity-95",
+        translateClass,
+      )}
     >
-      <p className={props.classes}>{props.text}</p>
+      <p className={clsx(props.classes, "group-hover:text-white")}>
+        {props.text}
+      </p>
     </div>
   );
 };
