@@ -12,11 +12,10 @@ export default {
 		},
     extend: {
 			backgroundImage: {
-				'hero': "url('/src/assets/img/image-hero.png')",
-				'aboutUs': "url('/src/assets/img/tea-garden.png')",
+				'hero': "url('/src/assets/img/image-hero.jpg')",
 				'teaBag': "url('/src/assets/img/tea.png')",
 				'teaLeavesBlack': "url('/src/assets/img/tea-leaves-black.png')",
-				'teaLeavesGreen': "url('/src/assets/img/tea-leaves-green.png')"
+				'teaLeavesGreen': "url('/src/assets/img/tea-leaves-green.png')",
 			},
 			colors: {
 				'canopy': '#55634B',

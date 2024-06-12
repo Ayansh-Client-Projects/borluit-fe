@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { ReactElement } from "react";
+import styles from "./MissionVision.module.css";
 
 const circularCardTexts = [
   "Celebrate Assam's diverse flavours and cultural heritage through our carefully crafted tea blends, honouring centuries-old traditions and showcasing the region's unique terroir",
@@ -12,13 +13,18 @@ const MissionVision = () => {
     "text-perrywinkle text-center font-display font-medium tracking-wider lg:max-w-[920px] lg:text-center";
 
   return (
-    <section className="space-y-16 bg-[#F0F0F0] px-6 pt-16 shadow-inner lg:space-y-32 lg:p-32 lg:shadow-none">
+    <section
+      className={clsx(
+        "space-y-16 bg-[#F0F0F0] px-6 pt-16 shadow-inner lg:space-y-32 lg:p-32 lg:shadow-none",
+        styles["background-mask"],
+      )}
+    >
       <section className="space-y-9">
         <Card header="Our Vision">
           <p className={textClasses}>
             Borluit{" "}
             <span
-              className={`before:font-palanquin relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-semibold before:tracking-[0.15em] before:text-canopy before:opacity-10 before:content-["''"]`}
+              className={`relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-palanquin before:font-semibold before:tracking-[0.15em] before:text-canopy before:opacity-10 before:content-["''"]`}
             >
               Tea aims
             </span>{" "}
@@ -64,7 +70,7 @@ const Card = (props: { header: string; children: ReactElement }) => {
     <section className="space-y-9">
       <h2
         className={clsx(
-          "relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:opacity-10 lg:text-4xl",
+          "relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
           content,
         )}
       >
@@ -102,9 +108,12 @@ const CardCircular = (props: {
   return (
     <div
       className={clsx(
-        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634B] border-opacity-30 px-4 text-center hover:bg-canopy hover:bg-opacity-95",
+        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634b2f] border-opacity-30 px-4 text-center hover:bg-[#55634ba5] hover:bg-opacity-95",
         translateClass,
       )}
+      style={{
+        transition: "background ease-in 200ms",
+      }}
     >
       <p className={clsx(props.classes, "group-hover:text-white")}>
         {props.text}

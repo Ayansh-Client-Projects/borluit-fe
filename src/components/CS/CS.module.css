@@ -1,0 +1,10 @@
+@media screen and (min-width: 1024px) {
+  .background-mask {
+    background:
+      url("/src/assets/svg/tea-leaves-top-1.svg") no-repeat,
+      url("/src/assets/svg/tea-leaves-bottom-2.svg") no-repeat top 35% right,
+      url("/src/assets/svg/weed-bg-top.svg") no-repeat bottom right,
+      url("/src/assets/svg/weed-bg-bottom.svg") no-repeat bottom 20% left,
+      #f0f0f0;
+  }
+}

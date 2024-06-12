@@ -1,0 +1,8 @@
+@media screen and (min-width: 1024px) {
+  .background-mask {
+    background:
+      url("/src/assets/svg/weed-new-1.svg") top left no-repeat,
+      url("/src/assets/svg/weed-new-2.svg") bottom right no-repeat,
+      #f0f0f0;
+  }
+}

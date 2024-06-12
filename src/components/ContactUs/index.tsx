@@ -3,9 +3,18 @@ import BoxIcon from "@/assets/svg/box.svg?react";
 import EmailIcon from "@/assets/svg/email.svg?react";
 import PhoneIcon from "@/assets/svg/phone.svg?react";
 import { InputHTMLAttributes, ReactElement } from "react";
+import styles from "./ContactUs.module.css";
+import clsx from "clsx";
+
 const ContactUs = () => {
   return (
-    <section className="bg-[#F0F0F0] px-6 py-16 lg:px-32 lg:py-32">
+    <section
+      id="contactus"
+      className={clsx(
+        "bg-[#F0F0F0] px-6 py-16 lg:px-32 lg:py-32",
+        styles["background-mask"],
+      )}
+    >
       <h2 className="font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-center lg:text-4xl">
         contact us
       </h2>
@@ -27,12 +36,12 @@ const MyForm = () => {
       <div className="col-span-2 flex min-h-[140px] gap-x-4 rounded-[4px] bg-white p-4">
         <textarea
           placeholder="Your Message"
-          className="text-perrywinkle placeholder-perrywinkle flex-1 font-display font-medium tracking-wider"
+          className="flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         />
       </div>
       <button
         type="submit"
-        className="bg-honey h-14 w-36 rounded-2xl font-display font-medium text-white"
+        className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white"
       >
         Submit
       </button>
@@ -53,7 +62,7 @@ export const MyInput = ({
       {props.icon && <span>{props.icon}</span>}
       <input
         type={type}
-        className="text-perrywinkle placeholder-perrywinkle w-auto flex-1 font-display font-medium tracking-wider"
+        className="w-auto flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         placeholder={props.placeholder}
       />
     </div>
@@ -89,13 +98,13 @@ const ContactUnit = (props: {
 }) => {
   return (
     <div>
-      <h3 className="text-wine pb-4 font-display text-2xl font-medium tracking-widest lg:font-semibold">
+      <h3 className="pb-4 font-display text-2xl font-medium tracking-widest text-wine lg:font-semibold">
         {props.title}
       </h3>
-      <p className="text-perrywinkle font-satoshi tracking-wider">
+      <p className="font-satoshi tracking-wider text-perrywinkle">
         {props.line1}
       </p>
-      <p className="text-perrywinkle font-satoshi tracking-wider">
+      <p className="font-satoshi tracking-wider text-perrywinkle">
         {props.line2}
       </p>
     </div>

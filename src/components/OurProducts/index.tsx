@@ -18,19 +18,25 @@ const productsList = [
 
 const OurProducts = () => {
   return (
-    <section className="bg-[#F0F0F0] px-6 py-16 lg:flex lg:justify-center lg:pt-28">
+    <section
+      id="ourproducts"
+      className={clsx(
+        "bg-[#F0F0F0] px-6 py-16 lg:flex lg:justify-center lg:pt-28",
+        styles["background-mask"],
+      )}
+    >
       <div className="space-y-8 lg:max-w-[920px]">
         <h2 className="font-display text-2xl font-semibold uppercase tracking-wider text-canopy lg:text-center lg:text-4xl">
           our products
         </h2>
-        <p className="font-satoshi text-perrywinkle tracking-wider lg:text-center">
+        <p className="font-satoshi tracking-wider text-perrywinkle lg:text-center">
           Discover the perfect cup with our premium tea selection. Handpicked
           from the finest gardens, each blend offers a unique taste experience.
           From classic black teas to refreshing green and herbal varieties, our
           collection is crafted to elevate your tea time. Indulge in quality,
           flavour, and tradition with every sip.
         </p>
-        <p className="font-satoshi text-perrywinkle tracking-wider lg:text-center">
+        <p className="font-satoshi tracking-wider text-perrywinkle lg:text-center">
           Experience the finest blends with our premium tea collection! Sourced
           from the world&apos;s best tea gardens in Assam, our teas promise
           unparalleled taste and aroma. Whether you prefer classic black,

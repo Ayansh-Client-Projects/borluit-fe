@@ -6,11 +6,21 @@
   }
 
   .content-slide {
-    opacity: 0;
-    animation-duration: 3s;
-    animation-name: slideUpAndFadeIn;
+    animation: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .background-slide {
+    animation-duration: 1.5s;
+    animation-name: slideDown;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+  }
+
+  .content-slide {
+    animation-duration: 1.5s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -31,5 +41,23 @@
   to {
     transform: translateY(0%);
     opacity: 100%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    background-position: top 100% right;
+  }
+  to {
+    background-position: top 0% right;
   }
 }

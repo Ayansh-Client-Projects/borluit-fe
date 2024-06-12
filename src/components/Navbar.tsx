@@ -3,23 +3,24 @@ import MenuSVG from "@/assets/svg/menu.svg?react";
 import CloseSVG from "@/assets/svg/close.svg?react";
 import { useEffect, useState } from "react";
 
-interface Link {
+export interface Link {
   href: string;
   title: string;
 }
 
-const links: Link[] = [
-  { href: "#", title: "our products" },
-  { href: "#", title: "about us" },
-  { href: "#", title: "testimonial" },
-  { href: "#", title: "contact us" },
+export const links: Link[] = [
+  { href: "#ourproducts", title: "our products" },
+  { href: "#aboutus", title: "about us" },
+  { href: "#testamonial", title: "testimonial" },
+  { href: "#contactus", title: "contact us" },
 ];
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const closeShowMenu = () => setShowMenu(false);
+
   useEffect(() => {
-    const closeShowMenu = () => setShowMenu(false);
     window.addEventListener("resize", closeShowMenu);
 
     return () => {
@@ -31,9 +32,13 @@ const Navbar = () => {
     setShowMenu((prev) => !prev);
   };
 
+  const handleNavigate = () => {
+    closeShowMenu();
+  };
+
   return (
     <>
-      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.8]">
+      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.95]">
         <a href="#">
           <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[46.43px] lg:w-[97.42px]" />
         </a>
@@ -52,7 +57,7 @@ const Navbar = () => {
         <ul className="hidden flex-row gap-x-24 lg:flex">
           {links.map((link) => (
             <li key={link.title}>
-              <Anchor {...link} />
+              <Anchor link={link} />
             </li>
           ))}
         </ul>
@@ -63,7 +68,7 @@ const Navbar = () => {
         >
           {links.map((link) => (
             <li key={link.title}>
-              <Anchor {...link} />
+              <Anchor link={link} onClick={handleNavigate} />
             </li>
           ))}
         </ul>
@@ -72,13 +77,17 @@ const Navbar = () => {
   );
 };
 
-const Anchor = (props: Link) => {
+const Anchor = (props: { link: Link; onClick?: () => void }) => {
   return (
     <a
-      href={props.href}
-      className="font-display font-medium uppercase text-gray-800"
+      onClick={props.onClick ?? undefined}
+      href={props.link.href}
+      className="font-display font-medium uppercase text-gray-800 hover:text-perrywinkle"
+      style={{
+        transition: "color ease-in 300ms",
+      }}
     >
-      {props.title}
+      {props.link.title}
     </a>
   );
 };

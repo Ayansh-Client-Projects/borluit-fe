@@ -1,42 +1,24 @@
 import LogoSVG from "@/assets/svg/logo2.svg?react";
 import clsx from "clsx";
 import { MyInput } from "../ContactUs";
+import { links as websitelinks, Link } from "@components/Navbar";
 
-const websitelinks = [
-  {
-    title: "about us",
-    link: "#",
-  },
-  {
-    title: "our products",
-    link: "#",
-  },
-  {
-    title: "testimonial",
-    link: "#",
-  },
-  {
-    title: "contact us",
-    link: "#",
-  },
-];
-
-const socialLinks = [
+const socialLinks: Link[] = [
   {
     title: "facebook",
-    link: "#",
+    href: "#",
   },
   {
     title: "instagram",
-    link: "#",
+    href: "#",
   },
   {
     title: "whatsapp",
-    link: "#",
+    href: "#",
   },
   {
     title: "twitter",
-    link: "#",
+    href: "#",
   },
 ];
 
@@ -60,7 +42,7 @@ const Footer = () => {
         </h3>
         <div className="space-y-4 lg:flex lg:gap-8 lg:space-y-0">
           <MyInput placeholder="Enter your email address" />
-          <button className="bg-honey h-14 w-36 rounded-2xl font-display font-medium text-white">
+          <button className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white">
             Subscribe
           </button>
         </div>
@@ -72,10 +54,7 @@ const Footer = () => {
   );
 };
 
-const ListSection = (props: {
-  links: { title: string; link: string }[];
-  title: string;
-}) => {
+const ListSection = (props: { links: Link[]; title: string }) => {
   const textClasses = "font-display font-medium uppercase tracking-wider";
 
   return (
@@ -85,7 +64,7 @@ const ListSection = (props: {
         <a
           className={clsx(textClasses, "block text-[#D9D9D9]")}
           key={link.title}
-          href={link.link}
+          href={link.href}
         >
           {link.title}
         </a>

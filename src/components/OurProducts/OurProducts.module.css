@@ -33,3 +33,11 @@
 .item3 {
   animation-delay: calc(25s / 3 * (3 - 3) * -1);
 }
+
+@media screen and (min-width: 1024px) {
+  .background-mask {
+    background:
+      url("/src/assets/svg/leaf-bg-top.svg") top left no-repeat,
+      url("/src/assets/svg/leaf-bg-bottom.svg") bottom right no-repeat;
+  }
+}

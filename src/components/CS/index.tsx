@@ -8,6 +8,8 @@ import S3SVG from "@/assets/svg/iconindustry.svg?react";
 import S4SVG from "@/assets/svg/iconleaf.svg?react";
 import S5SVG from "@/assets/svg/iconmug.svg?react";
 import { ReactElement } from "react";
+import clsx from "clsx";
+import styles from "./CS.module.css";
 
 const clist = [
   {
@@ -57,8 +59,13 @@ const slist = [
 
 const CSComp = () => {
   return (
-    <section className="space-y-16 bg-[#F0F0F0] lg:space-y-0 lg:p-32">
-      <section className="space-y-8 lg:space-y-16">
+    <section
+      className={clsx(
+        "space-y-16 bg-[#F0F0F0] lg:space-y-0 lg:p-32",
+        styles["background-mask"],
+      )}
+    >
+      <section className={"space-y-8 lg:space-y-16"}>
         <Header title="Distinctive characteristics" />
         <div className="grid place-items-center space-y-6 lg:flex lg:items-start lg:justify-center lg:gap-x-4 lg:space-y-0">
           {clist.map((item) => {

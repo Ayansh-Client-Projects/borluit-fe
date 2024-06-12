@@ -2,3 +2,42 @@
   border: none;
   background: #d9d9d9;
 }
+
+.button {
+  outline: 0;
+  transition: all 0.5s;
+  border-radius: 35px;
+  z-index: 1000;
+  border: 0;
+  border: 1.5px solid #55634b;
+  background-color: transparent;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.25);
+    background-color: #55634bad;
+    &::before {
+      color: white;
+    }
+  }
+
+  &._right {
+    &::before {
+      content: "\e825";
+    }
+  }
+
+  &::before {
+    font-size: 20px;
+    color: #55634b;
+    display: block;
+    font-family: revicons;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    content: "\e824";
+  }
+}

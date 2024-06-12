@@ -27,7 +27,12 @@ const Hero = () => {
         commodo enim sit amet magna semper lacinia. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. In commodo enim sit amet.
       </p>
-      <button className="bg-honey h-14 w-36 rounded-2xl font-display font-medium text-white">
+      <button
+        className="bg-honey h-14 w-36 rounded-2xl font-display font-medium text-white hover:opacity-60"
+        style={{
+          transition: "opacity ease-in 300ms",
+        }}
+      >
         Explore
       </button>
     </article>
