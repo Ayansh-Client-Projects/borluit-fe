@@ -101,25 +101,38 @@ const ProductItem = (props: {
   imgName: string;
 }) => {
   let imgClasses = "";
-  let bgChangeAnimationStyles: string[] = [];
+  let hiddenImgClasses = "";
   if (props.imgName.toLocaleLowerCase() === "green") {
     imgClasses = "bg-teaBag";
-    bgChangeAnimationStyles = [styles["animate-background"], styles.green];
+    hiddenImgClasses = "bg-teaLeavesGreen";
   }
   if (props.imgName.toLocaleLowerCase() === "black") {
     imgClasses = "bg-teaBag";
-    bgChangeAnimationStyles = [styles["animate-background"], styles.black];
+    hiddenImgClasses = "bg-teaLeavesBlack";
   }
 
   return (
     <div>
-      <div
-        className={clsx(
-          imgClasses,
-          "h-[400px] bg-contain bg-center bg-no-repeat",
-          bgChangeAnimationStyles,
-        )}
-      />
+      <div className="group relative h-[400px]">
+        <div
+          className={clsx(
+            "absolute h-full w-full bg-contain bg-center bg-no-repeat opacity-0 group-hover:opacity-100",
+            hiddenImgClasses,
+          )}
+          style={{
+            transition: "opacity ease-in 300ms",
+          }}
+        ></div>
+        <div
+          className={clsx(
+            imgClasses,
+            "absolute h-full w-full bg-contain bg-center bg-no-repeat group-hover:opacity-0",
+          )}
+          style={{
+            transition: "opacity ease-in 300ms",
+          }}
+        ></div>
+      </div>
       <p className="text-center font-display text-2xl font-semibold capitalize">
         {props.name}
       </p>
