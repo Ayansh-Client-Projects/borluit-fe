@@ -25,12 +25,12 @@ const clist = [
   {
     icon: C3SVG,
     title: "Craftsmanship",
-    text: "Our tea is crafted by experienced artisans, blending traditional techniques with modern innovation to create a tea of unparalleled quality and consistency.",
+    text: "Our tea is crafted by artisans, blending traditional techniques with modern innovation, resulting in unparalleled quality and consistency.",
   },
   {
     icon: C4SVG,
     title: "Community Impact",
-    text: "Borluit Tea's commitment to community empowerment means that every purchase supports the well-being and prosperity of the people of Assam.",
+    text: "Borluit Tea's commitment to community empowerment means that every purchase supports the well-being of the people of Assam.",
   },
 ];
 
@@ -53,7 +53,7 @@ const slist = [
   },
   {
     icon: S5SVG,
-    text: "250,000,000 No of tea cups made every year",
+    text: "25 crore tea cups / year",
   },
 ];
 
@@ -75,7 +75,7 @@ const CSComp = () => {
                 className="grid w-[280px] place-items-center space-y-2"
               >
                 <Badge icon={<item.icon />} title={item.title} isS />
-                <p className="font-satoshi text-perrywinkle text-center tracking-wide">
+                <p className="text-center font-satoshi tracking-wide text-perrywinkle">
                   {item.text}
                 </p>
               </div>
@@ -118,7 +118,7 @@ const Badge = (props: { icon: ReactElement; title: string; isS: boolean }) => {
       >
         {props.icon}
       </div>
-      <p className="text-wine text-center font-display font-medium tracking-wide">
+      <p className="text-center font-display font-medium tracking-wide text-wine">
         {props.title}
       </p>
     </>

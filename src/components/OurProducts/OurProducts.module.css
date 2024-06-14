@@ -41,3 +41,43 @@
       url("/src/assets/svg/leaf-bg-bottom.svg") bottom right no-repeat;
   }
 }
+@media screen and (min-width: 1024px) {
+  div:hover > .animate-background {
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    &.green {
+      animation-name: bgChangeGreen;
+    }
+
+    &.black {
+      animation-name: bgChangeBlack;
+    }
+  }
+}
+
+@keyframes bgChangeGreen {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  to {
+    background-image: url(/src/assets/img/tea-leaves-green.png);
+    opacity: 100%;
+  }
+}
+
+@keyframes bgChangeBlack {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  to {
+    background-image: url(/src/assets/img/tea-leaves-black.png);
+    opacity: 100%;
+  }
+}

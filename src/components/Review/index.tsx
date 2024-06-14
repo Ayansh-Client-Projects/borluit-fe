@@ -1,5 +1,5 @@
 import { Header } from "@components/CS";
-import MyComp from "../Carousel";
+import TestmonialCarousel from "../Carousel";
 import clsx from "clsx";
 import styles from "./Review.module.css";
 
@@ -14,7 +14,7 @@ const Review = () => {
     >
       <Header title="What our customers are saying" />
       <div className="relative mt-8 lg:w-[1200px]">
-        <MyComp />
+        <TestmonialCarousel />
       </div>
     </section>
   );

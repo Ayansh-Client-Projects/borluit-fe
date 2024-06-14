@@ -3,9 +3,9 @@ import { ReactElement } from "react";
 import styles from "./MissionVision.module.css";
 
 const circularCardTexts = [
-  "Celebrate Assam's diverse flavours and cultural heritage through our carefully crafted tea blends, honouring centuries-old traditions and showcasing the region's unique terroir",
-  "Embrace eco-friendly methods at every stage of tea production, from sustainable farming practices to environmentally conscious packaging, minimizing our ecological footprint and preserving the natural beauty of Assam's tea-growing landscapes.",
-  "Uplift local communities by partnering with small-scale tea growers, providing fair wages, promoting education and healthcare initiatives, and empowering individuals to thrive economically while preserving their cultural heritage and way of life.",
+  "Craft exceptional teas that showcase the rich and diverse heritage of Assam's tea traditions.",
+  "Partner with local growers, ensuring fair wages and supporting community development.",
+  "Implement sustainable farming and production practices to promote a healthier planet.",
 ];
 
 const MissionVision = () => {
@@ -22,16 +22,17 @@ const MissionVision = () => {
       <section className="space-y-9">
         <Card header="Our Vision">
           <p className={textClasses}>
-            Borluit{" "}
+            Our{" "}
             <span
               className={`relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-palanquin before:font-semibold before:tracking-[0.15em] before:text-canopy before:opacity-10 before:content-["''"]`}
             >
-              Tea aims
+              vision
             </span>{" "}
-            to lead in Assam tea, crafting each cup with the region&apos;s
-            finest flavors and traditions & We&apos;re committed to uplifting
-            Assam&apos;s communities through fair practices and sustainable
-            initiatives.
+            at Borluit Tea is to be the global ambassador of Assam&apos;s rich
+            tea heritage, offering exceptional and sustainable tea experiences
+            to the world. We aim to inspire and delight tea lovers with our
+            high-quality, ethically sourced teas, celebrating tradition and
+            promoting wellness.
           </p>
         </Card>
       </section>
@@ -42,7 +43,7 @@ const MissionVision = () => {
             embody the rich heritage and traditions of the region. We are
             dedicated to maintaining the highest standards of quality and
             sustainability, ensuring that each cup of tea brings joy and
-            well-being to our customers
+            well-being to our customers.
           </p>
         </Card>
       </section>
@@ -108,7 +109,7 @@ const CardCircular = (props: {
   return (
     <div
       className={clsx(
-        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634b2f] border-opacity-30 px-4 text-center hover:bg-[#55634ba5] hover:bg-opacity-95",
+        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634b2f] border-opacity-30 px-4 text-center hover:bg-[#55634ba5] hover:bg-opacity-95 lg:size-[300px]",
         translateClass,
       )}
       style={{

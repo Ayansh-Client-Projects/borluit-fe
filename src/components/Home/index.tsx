@@ -20,21 +20,22 @@ const Hero = () => {
       )}
     >
       <h1 className="font-display text-3xl font-bold tracking-wider text-canopy lg:text-6xl">
-        From our tea <br /> gardens directly <br /> to your cup
+        Assam&apos;s Tea Crafted with Tradition and Care
       </h1>
-      <p className="font-satoshi tracking-wider text-[#303030]">
-        Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. In
-        commodo enim sit amet magna semper lacinia. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. In commodo enim sit amet.
+      <p className="font-satoshi tracking-wider text-perrywinkle lg:text-[#303030]">
+        Elevate your tea experience with Borluit Tea, where tradition meets
+        innovation. Sourced from one of the finest tea growing regions in the
+        world. Discover the art of tea with Borluit Tea.
       </p>
-      <button
-        className="bg-honey h-14 w-36 rounded-2xl font-display font-medium text-white hover:opacity-60"
+      <a
+        href="#ourproducts"
+        className="flex h-14 w-36 items-center justify-center rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
         style={{
           transition: "opacity ease-in 300ms",
         }}
       >
         Explore
-      </button>
+      </a>
     </article>
   );
 };

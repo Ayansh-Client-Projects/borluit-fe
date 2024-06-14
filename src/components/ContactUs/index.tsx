@@ -41,7 +41,10 @@ const MyForm = () => {
       </div>
       <button
         type="submit"
-        className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white"
+        className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
+        style={{
+          transition: "opacity ease-in 300ms",
+        }}
       >
         Submit
       </button>
@@ -78,7 +81,7 @@ const ContactSection = () => {
         line2="Email : borluittea@gmail.com"
       />
       <ContactUnit
-        title="Boluit Tea House"
+        title="Borluit Tea House"
         line1="1st Floor, AAC Complex, S. J Road, Athgaon,"
         line2="Guwahati- 781001, Assam, India"
       />

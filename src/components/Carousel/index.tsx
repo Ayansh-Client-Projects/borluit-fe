@@ -7,7 +7,7 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -23,50 +23,28 @@ const responsive = {
 
 const list = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const ButtonGroup = ({
+export const ButtonGroup = ({
   next,
   previous,
-  ...rest
 }: {
   next?: () => void;
   previous?: () => void;
 }) => {
-  const { carouselState } = rest as {
-    carouselState: {
-      itemWidth: number;
-      slidesToShow: number;
-      currentSlide: number;
-      totalItems: number;
-      deviceType: string;
-      domLoaded: boolean;
-      transform: number;
-      containerWidth: number;
-    };
-  };
-
   return (
     <div className="hidden lg:absolute lg:top-[calc(50%-2rem)] lg:flex lg:w-[105%] lg:-translate-x-[2.5%] lg:justify-between">
       <button
-        className={clsx(
-          styles.button,
-          carouselState.currentSlide === 0 && "pointer-events-none opacity-0",
-        )}
+        className={clsx(styles.button)}
         onClick={() => previous && previous()}
       ></button>
       <button
-        className={clsx(
-          styles.button,
-          styles._right,
-          carouselState.slidesToShow + carouselState.currentSlide ===
-            carouselState.totalItems && "pointer-events-none opacity-0",
-        )}
+        className={clsx(styles.button, styles._right)}
         onClick={() => next && next()}
       ></button>
     </div>
   );
 };
 
-const MyComp = () => {
+const TestmonialCarousel = () => {
   return (
     <Carousel
       responsive={responsive}
@@ -76,6 +54,7 @@ const MyComp = () => {
       removeArrowOnDeviceType={["tablet", "mobile"]}
       dotListClass={styles["custom-dot-list-style"]}
       renderButtonGroupOutside={true}
+      infinite={true}
       arrows={false}
       customButtonGroup={<ButtonGroup />}
     >
@@ -107,4 +86,4 @@ const Card = () => {
   );
 };
 
-export default MyComp;
+export default TestmonialCarousel;

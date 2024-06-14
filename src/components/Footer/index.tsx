@@ -6,19 +6,15 @@ import { links as websitelinks, Link } from "@components/Navbar";
 const socialLinks: Link[] = [
   {
     title: "facebook",
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=61558882003901&mibextid=LQQJ4d",
   },
   {
     title: "instagram",
-    href: "#",
+    href: "https://instagram.com/borluit.tea",
   },
   {
     title: "whatsapp",
-    href: "#",
-  },
-  {
-    title: "twitter",
-    href: "#",
+    href: "https://wa.me/+919854068382",
   },
 ];
 
@@ -28,13 +24,17 @@ const Footer = () => {
       <section className="space-y-4 lg:max-w-[300px] lg:space-y-8">
         <LogoSVG />
         <p className="font-satoshi tracking-wider text-white">
-          Discover the perfect cup with our premium tea selection.Handpicked
-          from the finest gardens, each blend offers a unique taste experience.
+          Borluit Tea is dedicated to bringing the rich heritage and exquisite
+          flavors of Assam to tea lovers around the world.
         </p>
       </section>
       <section className="flex justify-between pt-8 lg:gap-32">
         <ListSection links={websitelinks} title="company" />
-        <ListSection links={socialLinks} title="follow us" />
+        <ListSection
+          links={socialLinks}
+          openLinkBlank={true}
+          title="follow us"
+        />
       </section>
       <section className="space-y-4 pt-8">
         <h3 className="font-display font-medium uppercase tracking-wider text-[#D8BB7B]">
@@ -42,7 +42,12 @@ const Footer = () => {
         </h3>
         <div className="space-y-4 lg:flex lg:gap-8 lg:space-y-0">
           <MyInput placeholder="Enter your email address" />
-          <button className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white">
+          <button
+            className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
+            style={{
+              transition: "opacity ease-in 300ms",
+            }}
+          >
             Subscribe
           </button>
         </div>
@@ -54,17 +59,28 @@ const Footer = () => {
   );
 };
 
-const ListSection = (props: { links: Link[]; title: string }) => {
+const ListSection = ({
+  links,
+  title,
+  openLinkBlank = false,
+}: {
+  links: Link[];
+  title: string;
+  openLinkBlank?: boolean;
+}) => {
   const textClasses = "font-display font-medium uppercase tracking-wider";
 
   return (
     <div className="space-y-4">
-      <p className={clsx(textClasses, "text-[#D8BB7B]")}>{props.title}</p>
-      {props.links.map((link) => (
+      <p className={clsx(textClasses, "text-[#D8BB7B]")}>{title}</p>
+      {links.map((link) => (
+        // eslint-disable-next-line react/jsx-no-target-blank
         <a
           className={clsx(textClasses, "block text-[#D9D9D9]")}
           key={link.title}
           href={link.href}
+          target={openLinkBlank ? "_blank" : undefined}
+          rel={openLinkBlank ? "noopener noreferrer" : undefined}
         >
           {link.title}
         </a>
