@@ -41,11 +41,13 @@ const Footer = () => {
           newsletter
         </h3>
         <form
-          name="newsletter"
-          data-netlify={true}
+          name="newsletter-form"
+          method="POST"
+          data-netlify="true"
           className="space-y-4 lg:flex lg:gap-8 lg:space-y-0"
         >
-          <MyInput placeholder="Enter your email address" name="newsletter" />
+          <input type='hidden' name='form-name' value='newsletter-form' />
+          <MyInput type="email" placeholder="Enter your email address" name="newsletter-email" />
           <button
             type="submit"
             className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"

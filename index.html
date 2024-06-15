@@ -8,6 +8,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <form name='contact-us-form' netlify hidden>
+      <input type='text' name='name' />
+      <input type='text' name='product' />
+      <input type='text' name='phone-number' />
+      <input type='email' name='email' />
+      <textarea name='message'></textarea>
+    </form>
+    <form name='newsletter-form' netlify hidden>
+      <input type='email' name='newsletter-email' />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

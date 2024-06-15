@@ -29,20 +29,23 @@ const ContactUs = () => {
 const MyForm = () => {
   return (
     <form
-      name="contact-us"
-      data-netlify={true}
+      name="contact-us-form"
+      method="POST"
+      data-netlify="true"
       className="space-y-4 pt-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0 lg:pt-0"
     >
-      <MyInput icon={<UserIcon />} placeholder="Name" />
+      <input type='hidden' name='form-name' value='contact-us-form' />
+      <MyInput icon={<UserIcon />} placeholder="Name" name="name" />
       <MyInput
         icon={<BoxIcon />}
         placeholder="Product Looking For"
         name="product"
       />
-      <MyInput icon={<PhoneIcon />} placeholder="Phone Number" />
-      <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} />
+      <MyInput icon={<PhoneIcon />} placeholder="Phone Number" name="phone-number" />
+      <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} name="email" />
       <div className="col-span-2 flex min-h-[140px] gap-x-4 rounded-[4px] bg-white p-4">
         <textarea
+          name="message"
           placeholder="Your Message"
           className="flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         />
