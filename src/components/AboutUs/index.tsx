@@ -12,14 +12,14 @@ const AboutUs = () => {
         styles["background-mask"],
       )}
     >
-      <section className="flex-1 basis-[456px] lg:relative lg:h-[576px] lg:w-[975px]">
+      <section className="flex flex-1 basis-[456px] lg:relative lg:h-[576px] lg:w-[975px]">
         <motion.img
           initial={{ objectPosition: "60%" }}
           transition={{ duration: 1 }}
           whileInView={{ objectPosition: "30%" }}
           viewport={{ margin: "0px 0px 0px 0px", once: true, amount: "all" }}
           src={TeaGarden}
-          className="h-full w-full object-cover lg:hover:translate-x-1 lg:hover:translate-y-1 lg:hover:scale-[1.015]"
+          className="w-full object-cover lg:hover:translate-x-1 lg:hover:translate-y-1 lg:hover:scale-[1.015]"
           style={{
             transition: "transform ease-in 300ms",
           }}
