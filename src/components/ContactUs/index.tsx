@@ -28,9 +28,17 @@ const ContactUs = () => {
 
 const MyForm = () => {
   return (
-    <form className="space-y-4 pt-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0 lg:pt-0">
+    <form
+      name="contact-us"
+      data-netlify={true}
+      className="space-y-4 pt-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0 lg:pt-0"
+    >
       <MyInput icon={<UserIcon />} placeholder="Name" />
-      <MyInput icon={<BoxIcon />} placeholder="Product Looking For" />
+      <MyInput
+        icon={<BoxIcon />}
+        placeholder="Product Looking For"
+        name="product"
+      />
       <MyInput icon={<PhoneIcon />} placeholder="Phone Number" />
       <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} />
       <div className="col-span-2 flex min-h-[140px] gap-x-4 rounded-[4px] bg-white p-4">
@@ -59,11 +67,15 @@ export const MyInput = ({
   icon?: ReactElement;
   placeholder: string;
   type?: InputHTMLAttributes<HTMLInputElement>["type"];
+  name?: string;
 }) => {
   return (
     <div className="flex h-14 gap-x-4 rounded-[4px] bg-white p-4">
       {props.icon && <span>{props.icon}</span>}
       <input
+        name={
+          props.name?.toLocaleLowerCase() ?? props.placeholder.toLowerCase()
+        }
         type={type}
         className="w-auto flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         placeholder={props.placeholder}

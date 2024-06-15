@@ -40,8 +40,12 @@ const Footer = () => {
         <h3 className="font-display font-medium uppercase tracking-wider text-[#D8BB7B]">
           newsletter
         </h3>
-        <div className="space-y-4 lg:flex lg:gap-8 lg:space-y-0">
-          <MyInput placeholder="Enter your email address" />
+        <form
+          name="newsletter"
+          data-netlify={true}
+          className="space-y-4 lg:flex lg:gap-8 lg:space-y-0"
+        >
+          <MyInput placeholder="Enter your email address" name="newsletter" />
           <button
             className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
             style={{
@@ -50,7 +54,7 @@ const Footer = () => {
           >
             Subscribe
           </button>
-        </div>
+        </form>
       </section>
       <p className="absolute bottom-6 font-display font-medium tracking-wider text-white">
         ©2024 borluittea
