@@ -47,7 +47,7 @@ const Footer = () => {
           className="space-y-4 lg:flex lg:gap-8 lg:space-y-0"
         >
           <input type='hidden' name='form-name' value='newsletter-form' />
-          <MyInput type="email" placeholder="Enter your email address" name="newsletter-email" />
+          <MyInput type="email" placeholder="Enter your email address" name="newsletter-email" required={true} />
           <button
             type="submit"
             className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"

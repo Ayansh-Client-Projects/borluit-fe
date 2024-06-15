@@ -35,17 +35,14 @@ const MyForm = () => {
       className="space-y-4 pt-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0 lg:pt-0"
     >
       <input type='hidden' name='form-name' value='contact-us-form' />
-      <MyInput icon={<UserIcon />} placeholder="Name" name="name" />
-      <MyInput
-        icon={<BoxIcon />}
-        placeholder="Product Looking For"
-        name="product"
-      />
-      <MyInput icon={<PhoneIcon />} placeholder="Phone Number" name="phone-number" />
-      <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} name="email" />
+      <MyInput icon={<UserIcon />} placeholder="Name" name="name"  required={true}  />
+      <MyInput icon={<BoxIcon />} placeholder="Product Looking For" name="product"  required={true} />
+      <MyInput icon={<PhoneIcon />} placeholder="Phone Number" name="phone-number"  required={true} />
+      <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} name="email"  required={true} />
       <div className="col-span-2 flex min-h-[140px] gap-x-4 rounded-[4px] bg-white p-4">
         <textarea
           name="message"
+          required={true} 
           placeholder="Your Message"
           className="flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         />
@@ -65,12 +62,14 @@ const MyForm = () => {
 
 export const MyInput = ({
   type = "text",
+  required = false,
   ...props
 }: {
   icon?: ReactElement;
   placeholder: string;
   type?: InputHTMLAttributes<HTMLInputElement>["type"];
   name?: string;
+  required?: boolean;
 }) => {
   return (
     <div className="flex h-14 gap-x-4 rounded-[4px] bg-white p-4">
@@ -82,6 +81,7 @@ export const MyInput = ({
         type={type}
         className="w-auto flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         placeholder={props.placeholder}
+        required={required}
       />
     </div>
   );
