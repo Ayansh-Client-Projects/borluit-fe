@@ -47,6 +47,7 @@ const Footer = () => {
         >
           <MyInput placeholder="Enter your email address" name="newsletter" />
           <button
+            type="submit"
             className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
             style={{
               transition: "opacity ease-in 300ms",
