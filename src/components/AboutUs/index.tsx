@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import styles from "./AboutUs.module.css";
-import TeaGarden from "@/assets/img/tea-garden.jpg";
+import TeaGarden from "@/assets/img/branded-tea.jpg";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
