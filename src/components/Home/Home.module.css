@@ -1,0 +1,63 @@
+@media screen and (max-width: 600px) {
+  .background-slide {
+    animation-duration: 3s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+  }
+
+  .content-slide {
+    animation: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .background-slide {
+    animation-duration: 1.5s;
+    animation-name: slideDown;
+    animation-fill-mode: forwards;
+  }
+
+  .content-slide {
+    animation-duration: 1.5s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    background-position: top 0px left 75%;
+  }
+  to {
+    background-position: top 0px left 55%;
+  }
+}
+
+@keyframes slideUpAndFadeIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    background-position: top 100% right;
+  }
+  to {
+    background-position: top 0% right;
+  }
+}

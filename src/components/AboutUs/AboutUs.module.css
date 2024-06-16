@@ -1,0 +1,7 @@
+@media screen and (min-width: 1024px) {
+  .background-mask {
+    background:
+      url("/src/assets/svg/tealeaf.svg") no-repeat,
+      url("/src/assets/svg/tealeaf-bottom.svg") no-repeat bottom right;
+  }
+}

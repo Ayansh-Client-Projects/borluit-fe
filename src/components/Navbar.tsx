@@ -3,24 +3,24 @@ import MenuSVG from "@/assets/svg/menu.svg?react";
 import CloseSVG from "@/assets/svg/close.svg?react";
 import { useEffect, useState } from "react";
 
-interface Link {
+export interface Link {
   href: string;
   title: string;
 }
 
-const links: Link[] = [
-  { href: "#", title: "our products" },
-  { href: "#", title: "about us" },
-  { href: "#", title: "testimonial" },
-  { href: "#", title: "contact us" },
+export const links: Link[] = [
+  { href: "#ourproducts", title: "our products" },
+  { href: "#aboutus", title: "about us" },
+  { href: "#testamonial", title: "testimonial" },
+  { href: "#contactus", title: "contact us" },
 ];
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  useEffect(() => {
-    const closeShowMenu = () => setShowMenu(false);
+  const closeShowMenu = () => setShowMenu(false);
 
+  useEffect(() => {
     window.addEventListener("resize", closeShowMenu);
 
     return () => {
@@ -32,11 +32,15 @@ const Navbar = () => {
     setShowMenu((prev) => !prev);
   };
 
+  const handleNavigate = () => {
+    closeShowMenu();
+  };
+
   return (
     <>
-      <nav className="bg-white w-full h-14 justify-center gap-x-56 lg:h-28 lg:bg-white/[0.8] flex flex-row items-center lg:justify-center lg:gap-x-96 fixed top-0 z-50 shadow-md">
+      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.95]">
         <a href="#">
-          <LogoSVG />
+          <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[46.43px] lg:w-[97.42px]" />
         </a>
         <div className="lg:hidden">
           <button
@@ -50,21 +54,21 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <ul className="hidden lg:flex flex-row gap-x-24">
+        <ul className="hidden flex-row gap-x-24 lg:flex">
           {links.map((link) => (
             <li key={link.title}>
-              <Anchor {...link} />
+              <Anchor link={link} />
             </li>
           ))}
         </ul>
       </nav>
       {showMenu && (
         <ul
-          className={`lg:hidden h-screen w-screen top-0 pt-24 bg-white flex flex-col items-center gap-y-16 absolute z-40`}
+          className={`fixed top-0 z-40 flex h-screen w-screen flex-col items-center gap-y-16 bg-[#F0F0F0] pt-28 lg:hidden`}
         >
           {links.map((link) => (
             <li key={link.title}>
-              <Anchor {...link} />
+              <Anchor link={link} onClick={handleNavigate} />
             </li>
           ))}
         </ul>
@@ -73,13 +77,17 @@ const Navbar = () => {
   );
 };
 
-const Anchor = (props: Link) => {
+const Anchor = (props: { link: Link; onClick?: () => void }) => {
   return (
     <a
-      href={props.href}
-      className="uppercase font-display font-medium text-gray-800"
+      onClick={props.onClick ?? undefined}
+      href={props.link.href}
+      className="font-display font-medium uppercase text-gray-800 hover:text-perrywinkle"
+      style={{
+        transition: "color ease-in 300ms",
+      }}
     >
-      {props.title}
+      {props.link.title}
     </a>
   );
 };

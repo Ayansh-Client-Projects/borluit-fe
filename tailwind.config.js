@@ -6,17 +6,25 @@ export default {
 	],
   theme: {
 		fontFamily: {
-			'display': ['"Clash Display"', 'sans-serif']
+			'display': ['"Clash Display"', 'sans-serif'],
+			'satoshi': ['Satoshi', 'sans-serif'],
+			'palanquin':['Palanquin Dark', 'sans-serif']
 		},
     extend: {
 			backgroundImage: {
-				'hero': "url('/src/assets/img/image-hero.png')"
+				'hero': "url('/src/assets/img/image-hero.jpg')",
+				'teaBag': "url('/src/assets/img/tea.png')",
+				'teaLeavesBlack': "url('/src/assets/img/tea-leaves-black.png')",
+				'teaLeavesGreen': "url('/src/assets/img/tea-leaves-green.png')",
 			},
 			colors: {
 				'canopy': '#55634B',
+				'perrywinkle': '#687D9B',
+				'wine': '#694451',
+				'honey': '#C1892C'
 			}
 		},
   },
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: [],
 }
 
