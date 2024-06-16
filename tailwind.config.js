@@ -12,7 +12,7 @@ export default {
 		},
     extend: {
 			backgroundImage: {
-				'hero': "url('/src/assets/img/image-hero.jpg')",
+				'hero': "url('/src/assets/img/image-hero.png')",
 				'teaBag': "url('/src/assets/img/tea.png')",
 				'teaLeavesBlack': "url('/src/assets/img/tea-leaves-black.png')",
 				'teaLeavesGreen': "url('/src/assets/img/tea-leaves-green.png')",
