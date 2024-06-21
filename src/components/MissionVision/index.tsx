@@ -22,17 +22,11 @@ const MissionVision = () => {
       <section className="space-y-9">
         <Card header="Our Vision">
           <p className={textClasses}>
-            Our{" "}
-            <span
-              className={`relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-palanquin before:font-semibold before:tracking-[0.15em] before:text-canopy before:opacity-10 before:content-["''"]`}
-            >
-              vision
-            </span>{" "}
-            at Borluit Tea is to be the global ambassador of Assam&apos;s rich
-            tea heritage, offering exceptional and sustainable tea experiences
-            to the world. We aim to inspire and delight tea lovers with our
-            high-quality, ethically sourced teas, celebrating tradition and
-            promoting wellness.
+            Our vision at Borluit Tea is to be the global ambassador of
+            Assam&apos;s rich tea heritage, offering exceptional and sustainable
+            tea experiences to the world. We aim to inspire and delight tea
+            lovers with our high-quality, ethically sourced teas, celebrating
+            tradition and promoting wellness.
           </p>
         </Card>
       </section>
