@@ -69,7 +69,7 @@ const CSComp = () => {
                 key={item.title}
                 className="grid w-[280px] place-items-center space-y-2"
               >
-                <Badge icon={<item.icon />} title={item.title} isS />
+                <Badge icon={<item.icon />} title={item.title} />
                 <p className="text-center font-satoshi tracking-wide text-perrywinkle">
                   {item.text}
                 </p>
@@ -113,15 +113,13 @@ export const Header = (props: { title: string }) => {
   );
 };
 
-const Badge = (props: { icon: ReactElement; title: string; isS: boolean }) => {
+const Badge = (props: { icon: ReactElement; title: string }) => {
   return (
     <>
-      <div
-        className={`grid size-[100px] place-items-center rounded-full ${props.isS ? "bg-canopy" : "bg-honey"}`}
-      >
+      <div className="grid size-[100px] place-items-center rounded-full bg-canopy">
         {props.icon}
       </div>
-      <p className="font-jost text-center font-medium tracking-wide text-wine">
+      <p className="font-jost text-center text-lg font-medium tracking-wide text-wine">
         {props.title}
       </p>
     </>

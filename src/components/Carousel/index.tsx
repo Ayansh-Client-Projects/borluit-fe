@@ -148,7 +148,7 @@ const Card = ({
       </p>
       <p className="text-center font-satoshi text-perrywinkle">{content}</p>
       <div>
-        <p className="font-jost text-center text-2xl font-semibold tracking-widest text-wine">
+        <p className="font-jost text-center text-2xl font-semibold uppercase tracking-widest text-wine">
           {name}
         </p>
         <p className="font-jost text-center text-2xl font-medium text-[#303030]">
