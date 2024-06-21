@@ -103,7 +103,7 @@ const CardCircular = (props: {
   return (
     <div
       className={clsx(
-        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634b2f] border-opacity-30 px-4 text-center hover:bg-[#55634ba5] hover:bg-opacity-95 lg:size-[300px]",
+        "group grid size-[250px] place-items-center rounded-full border-2 border-[#55634b2f] border-opacity-30 px-8 text-center hover:bg-[#55634ba5] hover:bg-opacity-95 sm:px-12 lg:size-[300px]",
         translateClass,
       )}
       style={{
