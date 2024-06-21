@@ -3,19 +3,34 @@ import styles from "./OurProducts.module.css";
 import clsx from "clsx";
 import { ButtonGroup } from "../Carousel";
 import carouselStyles from "../Carousel/Carousel.module.css";
+import AssamTeaProduct from "@/assets/img/assam-tea-product.webp";
+import AssamTeaLeaves from "@/assets/img/assam-tea-leaves-tranparent.webp";
+import GreenTeaProduct from "@/assets/img/green-tea-product.webp";
+import GreenTeaLeaves from "@/assets/img/green-tea-leaves-transparent.webp";
+import MasalaChaiProduct from "@/assets/img/masala-chai-product.webp";
+import MasalaChaiLeavesT from "@/assets/img/masala-chai-leaves-transparent.webp";
 
-const productsList = [
+interface Product {
+  name: string;
+  productImg: string;
+  leavesImg: string;
+}
+
+const ProductsList: Product[] = [
   {
-    image: "black",
-    name: "Black Tea",
+    name: "Assam Tea",
+    productImg: AssamTeaProduct,
+    leavesImg: AssamTeaLeaves,
   },
   {
-    image: "green",
     name: "Green Tea",
+    productImg: GreenTeaProduct,
+    leavesImg: GreenTeaLeaves,
   },
   {
-    image: "black",
-    name: "Black Tea",
+    name: "Masala Chai",
+    productImg: MasalaChaiProduct,
+    leavesImg: MasalaChaiLeavesT,
   },
 ];
 
@@ -49,7 +64,7 @@ const OurProducts = () => {
           a celebration of tradition, quality, and the rich heritage of Assam.
         </p>
       </div>
-      <div className="relative mt-16 h-[448px] lg:w-[1380px]">
+      <div className="relative sm:mt-16 sm:h-[448px] lg:w-[1380px]">
         <Carousel
           responsive={responsive}
           swipeable={true}
@@ -62,9 +77,10 @@ const OurProducts = () => {
           showDots
           dotListClass={carouselStyles["custom-dot-list-style"]}
         >
-          {productsList.map((p, idx) => (
+          {ProductsList.map((p, idx) => (
             <ProductItem
-              imgName={p.image}
+              productImg={p.productImg}
+              leavesImg={p.leavesImg}
               name={p.name}
               position={idx + 1}
               key={p.name.toLocaleLowerCase() + idx}
@@ -97,45 +113,33 @@ const responsive = {
 const ProductItem = (props: {
   position: number;
   name: string;
-  imgName: string;
+  productImg: string;
+  leavesImg: string;
 }) => {
-  let imgClasses = "";
-  let hiddenImgClasses = "";
-  if (props.imgName.toLocaleLowerCase() === "green") {
-    imgClasses = "bg-teaBag";
-    hiddenImgClasses = "bg-teaLeavesGreen";
-  }
-  if (props.imgName.toLocaleLowerCase() === "black") {
-    imgClasses = "bg-teaBag";
-    hiddenImgClasses = "bg-teaLeavesBlack";
-  }
-
   return (
-    <div>
-      <div className="group relative h-[400px]">
+    <>
+      <div className="group relative m-auto h-[400px] w-[250px]">
         <div
-          className={clsx(
-            "absolute h-full w-full bg-contain bg-center bg-no-repeat opacity-0 group-hover:opacity-100",
-            hiddenImgClasses,
-          )}
+          className="absolute left-[10%] top-1/3 block h-2/3 w-[80%] opacity-0 group-hover:opacity-100"
           style={{
             transition: "opacity ease-in 300ms",
           }}
-        ></div>
-        <div
-          className={clsx(
-            imgClasses,
-            "absolute h-full w-full bg-contain bg-center bg-no-repeat group-hover:opacity-0",
-          )}
+        >
+          <img src={props.leavesImg} />
+        </div>
+
+        <img
+          className="absolute block h-full w-full translate-x-4 object-cover opacity-100 group-hover:opacity-0"
+          src={props.productImg}
           style={{
-            transition: "opacity ease-in 300ms",
+            transition: "opacity ease-in 100ms",
           }}
-        ></div>
+        />
       </div>
-      <p className="font-jost text-center text-2xl font-semibold capitalize">
+      <p className="font-jost text-center text-2xl font-semibold capitalize text-canopy">
         {props.name}
       </p>
-    </div>
+    </>
   );
 };
 
