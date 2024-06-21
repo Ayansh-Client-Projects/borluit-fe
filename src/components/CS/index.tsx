@@ -2,11 +2,6 @@ import C1SVG from "@/assets/svg/icon-defense.svg?react";
 import C2SVG from "@/assets/svg/iconhand.svg?react";
 import C3SVG from "@/assets/svg/iconhead.svg?react";
 import C4SVG from "@/assets/svg/iconworld.svg?react";
-import S1SVG from "@/assets/svg/iconpeople.svg?react";
-import S2SVG from "@/assets/svg/iconsun.svg?react";
-import S3SVG from "@/assets/svg/iconindustry.svg?react";
-import S4SVG from "@/assets/svg/iconleaf.svg?react";
-import S5SVG from "@/assets/svg/iconmug.svg?react";
 import { ReactElement } from "react";
 import clsx from "clsx";
 import styles from "./CS.module.css";
@@ -36,24 +31,24 @@ const clist = [
 
 const slist = [
   {
-    icon: S1SVG,
-    text: "102 farmers & counting",
+    count: "102",
+    text: "Farmers & counting",
   },
   {
-    icon: S2SVG,
-    text: "721 hectares",
+    count: "721",
+    text: "Hectares",
   },
   {
-    icon: S3SVG,
-    text: "98 percent traceability",
+    count: "98%",
+    text: "Traceability",
   },
   {
-    icon: S4SVG,
-    text: "56 percent fineleaf count",
+    count: "56%",
+    text: "Fineleaf count",
   },
   {
-    icon: S5SVG,
-    text: "25 crore tea cups / year",
+    count: "25 Cr",
+    text: "Tea cups / year",
   },
 ];
 
@@ -86,13 +81,21 @@ const CSComp = () => {
       <section className="space-y-8 lg:space-y-16 lg:pt-[240px]">
         <Header title="our stats"></Header>
         <div className="grid place-items-center space-y-6 lg:flex lg:items-start lg:justify-center lg:gap-x-4 lg:space-y-0">
-          {slist.map((item) => {
+          {slist.map((item, idx) => {
             return (
               <div
                 key={item.text.slice(0, 5)}
-                className="grid w-[219px] place-items-center space-y-2"
+                className="relative grid w-full place-items-center space-y-2"
               >
-                <Badge icon={<item.icon />} title={item.text} isS={false} />
+                <p className="font-jost text-center text-5xl font-bold tracking-wide text-honey lg:text-6xl">
+                  {item.count}
+                </p>
+                <p className="text-center font-satoshi font-semibold tracking-wide text-wine">
+                  {item.text}
+                </p>
+                {idx !== slist.length - 1 && (
+                  <div className="absolute right-0 top-[8%] h-[70%] border-r-2 border-wine"></div>
+                )}
               </div>
             );
           })}
