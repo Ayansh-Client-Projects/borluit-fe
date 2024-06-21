@@ -118,21 +118,21 @@ const ProductItem = (props: {
 }) => {
   return (
     <>
-      <div className="group relative m-auto h-[400px] w-[250px]">
+      <div className="group relative m-auto h-[400px] w-[300px]">
         <div
-          className="absolute left-[10%] top-1/3 block h-2/3 w-[80%] opacity-0 group-hover:opacity-100"
+          className="absolute left-[0%] top-[20%] h-full w-full sm:group-hover:-translate-y-2 sm:group-hover:scale-105"
           style={{
-            transition: "opacity ease-in 300ms",
+            transition: "all ease-in 150ms",
           }}
         >
           <img src={props.leavesImg} />
         </div>
 
         <img
-          className="absolute block h-full w-full translate-x-4 object-cover opacity-100 group-hover:opacity-0"
+          className="absolute -top-6 h-full w-full translate-x-4 object-cover sm:group-hover:-translate-y-8 sm:group-hover:scale-105"
           src={props.productImg}
           style={{
-            transition: "opacity ease-in 100ms",
+            transition: "all ease-in 150ms",
           }}
         />
       </div>
