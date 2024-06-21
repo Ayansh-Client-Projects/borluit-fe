@@ -45,9 +45,9 @@ const Card = (props: { classes: string }) => {
         world&apos;s most exceptional teas.
         <br />
         At Borluit Tea, we believe in preserving tradition while embracing
-        innovation. Our carefully curated collection includes robust Assam Black
-        Tea, refreshing Assam Green Tea, aromatic Masala Chai, delicate Assam
-        White Tea, and soothing Herbal Infusions.
+        innovation. Our carefully curated collection includes robust Assam Tea,
+        refreshing Green Tea, aromatic Masala Chai, and soothing Herbal
+        Infusions.
       </p>
     </section>
   );

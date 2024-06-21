@@ -36,12 +36,11 @@ const OurProducts = () => {
           Discover the essence of Assam with Borluit Tea. Our collection
           features a range of exquisite teas, each meticulously crafted to
           deliver an unparalleled tea experience. Indulge in the bold and robust
-          flavor of our Assam Black Tea, perfect for kickstarting your day. For
-          a healthier option, savor the fresh and earthy notes of our Assam
-          Green Tea, rich in antioxidants. Our Masala Chai blends traditional
-          Assam tea with aromatic spices, offering a warm and comforting treat.
-          For a more refined taste, our Assam White Tea provides a delicate and
-          sweet flavor, ideal for a luxurious tea experience.
+          flavor of our Assam Tea, perfect for kickstarting your day. For a
+          healthier option, savor the fresh and earthy notes of our Green Tea,
+          rich in antioxidants. For a more refined taste, our Masala Chai blends
+          traditional Assam tea with aromatic spices, offering a warm and
+          comforting treat.
         </p>
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
           Additionally, our Herbal Infusions combine the finest Assam tea with
