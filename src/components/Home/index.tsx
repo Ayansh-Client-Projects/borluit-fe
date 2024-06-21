@@ -19,10 +19,10 @@ const Hero = () => {
         styles["content-slide"],
       )}
     >
-      <h1 className="font-jost text-3xl font-bold tracking-wider text-canopy drop-shadow-md lg:text-6xl">
+      <h1 className="font-jost text-3xl font-bold tracking-wider text-canopy lg:text-6xl">
         Assam&apos;s Tea Crafted with Tradition & Care
       </h1>
-      <p className="font-satoshi tracking-wider text-perrywinkle drop-shadow-md lg:text-[#303030]">
+      <p className="font-satoshi tracking-wider text-perrywinkle lg:text-[#303030]">
         Elevate your tea experience with Borluit Tea, where tradition meets
         innovation.{" "}
         <span className="hidden sm:inline">
