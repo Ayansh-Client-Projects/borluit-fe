@@ -5,5 +5,12 @@
       url("/src/assets/img/map.png") center no-repeat,
       url("/src/assets/svg/weed-bg-4.svg") bottom right no-repeat,
       #f0f0f0;
+    background-size:
+    /* This is for the first image */
+      auto,
+      /* This is for the second image, making it take 55% of the section size as large */
+        55% auto,
+      /* This is for the third image */ auto,
+      /* This is for the background color */ auto;
   }
 }
