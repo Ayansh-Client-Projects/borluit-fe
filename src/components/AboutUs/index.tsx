@@ -34,7 +34,7 @@ const AboutUs = () => {
 const Card = (props: { classes: string }) => {
   return (
     <section className={clsx("space-y-4 bg-white px-6 py-8", props.classes)}>
-      <h2 className="font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
+      <h2 className="font-jost text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
         About Us
       </h2>
       <p className="text-justify font-satoshi tracking-wider text-perrywinkle">

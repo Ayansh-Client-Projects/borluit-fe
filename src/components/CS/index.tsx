@@ -104,7 +104,7 @@ const CSComp = () => {
 
 export const Header = (props: { title: string }) => {
   return (
-    <h2 className="text-center font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
+    <h2 className="font-jost text-center text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
       {props.title}
     </h2>
   );
@@ -118,7 +118,7 @@ const Badge = (props: { icon: ReactElement; title: string; isS: boolean }) => {
       >
         {props.icon}
       </div>
-      <p className="text-center font-display font-medium tracking-wide text-wine">
+      <p className="font-jost text-center font-medium tracking-wide text-wine">
         {props.title}
       </p>
     </>

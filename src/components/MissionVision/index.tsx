@@ -10,7 +10,7 @@ const circularCardTexts = [
 
 const MissionVision = () => {
   const textClasses =
-    "text-perrywinkle text-center font-display font-medium tracking-wider lg:max-w-[920px] lg:text-center";
+    "text-perrywinkle text-center font-jost font-medium tracking-wider lg:max-w-[920px] lg:text-center";
 
   return (
     <section
@@ -71,7 +71,7 @@ const Card = (props: { header: string; children: ReactElement }) => {
     <section className="space-y-9">
       <h2
         className={clsx(
-          "relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
+          "font-jost relative text-center text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
           content,
         )}
       >

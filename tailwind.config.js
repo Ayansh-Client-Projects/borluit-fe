@@ -6,7 +6,7 @@ export default {
 	],
   theme: {
 		fontFamily: {
-			'display': ['"Clash Display"', 'sans-serif'],
+			'jost': ['"Jost"', 'sans-serif'],
 			'satoshi': ['Satoshi', 'sans-serif'],
 			'palanquin':['Palanquin Dark', 'sans-serif']
 		},

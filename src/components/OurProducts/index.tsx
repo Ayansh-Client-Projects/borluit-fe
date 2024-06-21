@@ -29,7 +29,7 @@ const OurProducts = () => {
       )}
     >
       <div className="space-y-8 lg:max-w-[920px]">
-        <h2 className="font-display text-2xl font-semibold uppercase tracking-wider text-canopy lg:text-center lg:text-4xl">
+        <h2 className="font-jost text-2xl font-semibold uppercase tracking-wider text-canopy lg:text-center lg:text-4xl">
           our products
         </h2>
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
@@ -133,7 +133,7 @@ const ProductItem = (props: {
           }}
         ></div>
       </div>
-      <p className="text-center font-display text-2xl font-semibold capitalize">
+      <p className="font-jost text-center text-2xl font-semibold capitalize">
         {props.name}
       </p>
     </div>
