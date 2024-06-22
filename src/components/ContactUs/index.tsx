@@ -118,12 +118,12 @@ const ContactSection = () => {
       />
       <ContactUnit
         title="Borluit Tea House"
-        line1="1st Floor, AAC Complex, S.J Road, Athgaon"
-        line2="Guwahati- 781001, Assam, India"
+        line1="1st Floor, AAC Commercial Complex, S.J Road,"
+        line2="Athgaon, Guwahati- 781001, Assam, India"
       />
       <ContactUnit
         title="Sales related queries / Complaints"
-        line1="1 No. Ambikapur, P.O. Brahmajan, P.S. Pengeri"
+        line1="1 No. Ambikapur, P.O. Brahmajan, P.S. Pengeri,"
         line2="District- Tinsukia, Assam - 786174, India"
       />
     </section>
