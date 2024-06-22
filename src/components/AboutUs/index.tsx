@@ -19,12 +19,12 @@ const AboutUs = () => {
           whileInView={{ objectPosition: "30%" }}
           viewport={{ margin: "0px 0px 0px 0px", once: true, amount: "all" }}
           src={TeaGarden}
-          className="w-full object-cover lg:hover:translate-x-1 lg:hover:translate-y-1 lg:hover:scale-[1.015]"
+          className="w-full object-cover lg:-translate-x-28 lg:hover:-translate-x-[6.5rem] lg:hover:translate-y-1 lg:hover:scale-[1.015]"
           style={{
             transition: "transform ease-in 300ms",
           }}
         />
-        <Card classes="hidden lg:absolute lg:block lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:translate-x-1/2 lg:max-w-[490px] lg:p-14 " />
+        <Card classes="hidden lg:absolute lg:block lg:top-1/2 lg:-translate-y-1/2 lg:-right-32  lg:max-w-[550px] lg:p-14 " />
       </section>
       <Card classes="flex-1 lg:hidden" />
     </section>
@@ -47,7 +47,9 @@ const Card = (props: { classes: string }) => {
         At Borluit Tea, we believe in preserving tradition while embracing
         innovation. Our carefully curated collection includes robust Assam Tea,
         refreshing Green Tea, aromatic Masala Chai, and soothing Herbal
-        Infusions.
+        Infusions. Our Herbal Infusions combine the finest Assam tea with
+        carefully selected herbs, creating a calming and aromatic journey
+        perfect for relaxation and well-being.
       </p>
     </section>
   );

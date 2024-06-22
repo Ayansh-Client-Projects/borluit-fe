@@ -43,24 +43,33 @@ const OurProducts = () => {
         styles["background-mask"],
       )}
     >
-      <div className="space-y-8 lg:max-w-[920px]">
+      <div className="space-y-4 lg:max-w-[900px]">
         <h2 className="font-jost text-2xl font-semibold uppercase tracking-wider text-canopy lg:text-center lg:text-4xl">
           our products
         </h2>
+
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
-          Discover the essence of Assam with Borluit Tea’s exquisite range, each
-          variant of tea meticulously crafted to deliver an unparalleled tea
-          experience. Indulge in the bold and robust flavor of our Assam Tea,
-          perfect for kickstarting your day. For a healthier option, savor the
-          fresh and earthy notes of our Green Tea, rich in antioxidants. For a
-          more refined taste, our Masala Chai blends traditional Assam tea with
-          aromatic spices, offering a warm and comforting treat.
+          <span className="text-md font-jost">Assam Tea:</span> Awaken your
+          senses wflavore full-bodied richness of our Assam Tea. This bold brew
+          boasts a deep amber color and a robust, malty flavor profile. Its
+          smooth, velvety texture coats the palate, while the brisk,
+          invigorating finish makes it the perfect companion to greet the dawn.
         </p>
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
-          Additionally, our Herbal Infusions combine the finest Assam tea with
-          carefully selected herbs, creating a calming and aromatic journey
-          perfect for relaxation and well-being. With Borluit Tea, every cup is
-          a celebration of tradition, quality, and the rich heritage of Assam.
+          <span className="text-md font-jost">Green Tea:</span>
+          Immerse yourself in the delicate world of our Green Tea. Light and
+          refreshing, it offers a clean, crisp texture that glides effortlessly
+          across your palate. The subtle sweetness and slightly dry finish leave
+          you feeling revitalized and purified.
+        </p>
+        <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
+          <span className="text-md font-jost">Masala Chai:</span> Indulge in the
+          aromatic embrace of our Masala Chai. This harmonious blend marries the
+          robust Assam tea base with a symphony of fragrant spices. The smooth,
+          creamy texture is punctuated by the warmth of nutmeg, the sweetness of
+          cardamom and cinnamon, and the earthy depth of cloves. Each sip
+          unfolds a new layer of flavor, culminating in a lingering,
+          spice-infused aftertaste that comforts and invigorates.
         </p>
       </div>
       <div className="relative sm:mt-16 sm:h-[448px] lg:w-[1380px]">
