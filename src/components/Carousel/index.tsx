@@ -25,61 +25,55 @@ const Testimonials = [
     name: "Udita Kalita",
     content:
       "I've tried numerous green teas, but Borluit Green Tea stands out. The flavour is refreshingly pure and keeps me energized throughout the day.",
-    product: "Borluit Green Tea",
-  },
-  {
-    name: "Zainab Zeya",
-    content:
-      "As a health-conscious individual, Borluit Green Tea is my go-to. It offers a subtle, delightful taste without any artificial additives. Highly recommended!",
-    product: "Borluit Green Tea",
+    product: "Green Tea",
   },
   {
     name: "Kirtana Das",
     content:
       "Borluit Orthodox Tea has a rich aroma that fills my kitchen every morning. The taste is impeccable, making it my favourite daily ritual.",
-    product: "Borluit Orthodox Tea",
-  },
-  {
-    name: "Nashique Ahmed",
-    content:
-      "For those who appreciate high-quality tea, Borluit Orthodox Tea is a must-try. The deep, robust flavour is unlike any other orthodox tea I've tasted.",
-    product: "Borluit Orthodox Tea",
+    product: "Orthodox Tea",
   },
   {
     name: "Anirudh Agarwala",
     content:
       "Borluit Assam Tea is my morning booster. Its bold, invigorating taste wakes me up instantly. It's the perfect start to my day.",
-    product: "Borluit Assam Tea",
+    product: "Assam Tea",
   },
   {
-    name: "Chandralekha Bania",
+    name: "Nashique Ahmed",
     content:
-      "The quality of Borluit Assam Tea is exceptional. It has a rich, full-bodied flavour that I can't get enough of. A true gem from Assam!",
-    product: "Borluit Assam Tea",
+      "For those who appreciate high-quality tea, Borluit Orthodox Tea is a must-try. The deep, robust flavour is unlike any other orthodox tea I've tasted.",
+    product: "Orthodox Tea",
   },
   {
     name: "Dhiraj Sharma",
     content:
       "I always serve Borluit Tea when I have guests over. Whether it's Green, Orthodox, or Assam, everyone loves it. It adds a touch of elegance to any gathering.",
-    product: "Borluit Tea",
+    product: "Tea",
   },
   {
     name: "Mayank Ajitsariya",
     content:
       "My evenings are incomplete without a cup of Borluit Green Tea. It helps me unwind and relax after a long day. Truly soothing.",
-    product: "Borluit Green Tea",
+    product: "Green Tea",
+  },
+  {
+    name: "Chandralekha Bania",
+    content:
+      "The quality of Borluit Assam Tea is exceptional. It has a rich, full-bodied flavour that I can't get enough of. A true gem from Assam!",
+    product: "Assam Tea",
   },
   {
     name: "Heemanshu Agarwalla",
     content:
       "I trust Borluit Tea for its consistent quality and superior taste. Each variety offers a unique experience, making it a staple in my pantry.",
-    product: "Borluit Tea",
+    product: "Tea",
   },
   {
-    name: "Rojan Varghese",
+    name: "Zainab Zeya",
     content:
-      "Borluit Tea always arrives fresh and fragrant. The packaging preserves the quality, ensuring I get the best cup every time. Highly satisfied!",
-    product: "Borluit Tea",
+      "As a health-conscious individual, Borluit Green Tea is my go-to. It offers a subtle, delightful taste without any artificial additives. Highly recommended!",
+    product: "Green Tea",
   },
 ];
 
