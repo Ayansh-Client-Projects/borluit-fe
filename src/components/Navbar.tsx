@@ -82,7 +82,7 @@ const Anchor = (props: { link: Link; onClick?: () => void }) => {
     <a
       onClick={props.onClick ?? undefined}
       href={props.link.href}
-      className="font-display font-medium uppercase text-gray-800 hover:text-perrywinkle"
+      className="font-jost font-medium uppercase text-gray-800 hover:text-perrywinkle"
       style={{
         transition: "color ease-in 300ms",
       }}
