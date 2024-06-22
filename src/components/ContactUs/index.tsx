@@ -65,12 +65,12 @@ const MyForm = () => {
           name="message"
           required={true}
           placeholder="Your Message"
-          className="font-jost flex-1 font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
+          className="flex-1 font-jost font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         />
       </div>
       <button
         type="submit"
-        className="font-jost h-14 w-36 rounded-2xl bg-honey font-medium text-white hover:opacity-60"
+        className="h-14 w-36 rounded-2xl bg-honey font-jost font-medium text-white hover:opacity-60"
         style={{
           transition: "opacity ease-in 300ms",
         }}
@@ -100,7 +100,7 @@ export const MyInput = ({
           props.name?.toLocaleLowerCase() ?? props.placeholder.toLowerCase()
         }
         type={type}
-        className="font-jost w-auto flex-1 font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
+        className="w-auto flex-1 font-jost font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         placeholder={props.placeholder}
         required={required}
       />
@@ -113,17 +113,17 @@ const ContactSection = () => {
     <section className="mt-6 space-y-6 lg:mt-0 lg:space-y-12">
       <ContactUnit
         title="Customer Care"
-        line1="Phone No : +91-6000644486 (8 am to 9 pm)"
+        line1="Phone No : +91-6000644486 (8am to 9pm)"
         line2="Email : borluittea@gmail.com"
       />
       <ContactUnit
         title="Borluit Tea House"
-        line1="1st Floor, AAC Complex, S. J Road, Athgaon,"
+        line1="1st Floor, AAC Complex, S.J Road, Athgaon"
         line2="Guwahati- 781001, Assam, India"
       />
       <ContactUnit
         title="Sales related queries / Complaints"
-        line1="1 No. Ambikapur, P.O. Brahmajan, P.S. Pengeri,"
+        line1="1 No. Ambikapur, P.O. Brahmajan, P.S. Pengeri"
         line2="District- Tinsukia, Assam - 786174, India"
       />
     </section>
@@ -137,15 +137,11 @@ const ContactUnit = (props: {
 }) => {
   return (
     <div>
-      <h3 className="font-jost pb-4 text-2xl font-medium tracking-widest text-wine lg:font-semibold">
+      <h3 className="pb-4 font-jost text-2xl font-medium tracking-wide text-wine lg:font-semibold">
         {props.title}
       </h3>
-      <p className="font-satoshi tracking-wider text-perrywinkle">
-        {props.line1}
-      </p>
-      <p className="font-satoshi tracking-wider text-perrywinkle">
-        {props.line2}
-      </p>
+      <p className="font-satoshi text-perrywinkle">{props.line1}</p>
+      <p className="font-satoshi text-perrywinkle">{props.line2}</p>
     </div>
   );
 };

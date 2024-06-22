@@ -20,7 +20,9 @@ const Hero = () => {
       )}
     >
       <h1 className="font-jost text-3xl font-bold tracking-wider text-canopy lg:text-6xl">
-        Assam&apos;s Tea Crafted with Tradition & Care
+        Assam&apos;s Tea
+        <br /> Crafted with
+        <br /> Tradition & Care
       </h1>
       <p className="font-satoshi tracking-wider text-perrywinkle lg:text-[#303030]">
         Elevate your tea experience with Borluit Tea, where tradition meets
@@ -32,7 +34,7 @@ const Hero = () => {
       </p>
       <a
         href="#ourproducts"
-        className="font-jost flex h-11 w-24 items-center justify-center rounded-2xl bg-honey font-medium text-white hover:opacity-60 sm:h-14 sm:w-36"
+        className="flex h-11 w-24 items-center justify-center rounded-2xl bg-honey font-jost font-medium text-white hover:opacity-60 sm:h-14 sm:w-36"
         style={{
           transition: "opacity ease-in 300ms",
         }}

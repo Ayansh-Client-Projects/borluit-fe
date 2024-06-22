@@ -48,14 +48,13 @@ const OurProducts = () => {
           our products
         </h2>
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
-          Discover the essence of Assam with Borluit Tea. Our collection
-          features a range of exquisite teas, each meticulously crafted to
-          deliver an unparalleled tea experience. Indulge in the bold and robust
-          flavor of our Assam Tea, perfect for kickstarting your day. For a
-          healthier option, savor the fresh and earthy notes of our Green Tea,
-          rich in antioxidants. For a more refined taste, our Masala Chai blends
-          traditional Assam tea with aromatic spices, offering a warm and
-          comforting treat.
+          Discover the essence of Assam with Borluit Tea’s exquisite range, each
+          variant of tea meticulously crafted to deliver an unparalleled tea
+          experience. Indulge in the bold and robust flavor of our Assam Tea,
+          perfect for kickstarting your day. For a healthier option, savor the
+          fresh and earthy notes of our Green Tea, rich in antioxidants. For a
+          more refined taste, our Masala Chai blends traditional Assam tea with
+          aromatic spices, offering a warm and comforting treat.
         </p>
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
           Additionally, our Herbal Infusions combine the finest Assam tea with
@@ -136,7 +135,7 @@ const ProductItem = (props: {
           }}
         />
       </div>
-      <p className="font-jost text-center text-2xl font-semibold capitalize text-canopy">
+      <p className="text-center font-jost text-2xl font-semibold capitalize text-canopy">
         {props.name}
       </p>
     </>
