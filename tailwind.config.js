@@ -12,7 +12,7 @@ export default {
 		},
     extend: {
 			backgroundImage: {
-				'hero': "url('/src/assets/img/image-hero.png')",
+				'hero': "url('/src/assets/img/image-hero.webp')",
 			},
 			colors: {
 				'canopy': '#55634B',

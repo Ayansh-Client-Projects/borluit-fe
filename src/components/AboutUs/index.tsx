@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import styles from "./AboutUs.module.css";
-import TeaGarden from "@/assets/img/branded-tea.jpg";
+import TeaGarden from "@/assets/img/about-us-tea-estate.webp";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
@@ -43,7 +43,7 @@ const Card = (props: { classes: string }) => {
         journey began with a passion for sharing the finest teas, handpicked
         from the lush tea gardens of Assam, known for producing some of the
         world&apos;s most exceptional teas.
-        <br />
+        <span className="block pb-2" />
         At Borluit Tea, we believe in preserving tradition while embracing
         innovation. Our carefully curated collection includes robust Assam Tea,
         refreshing Green Tea, aromatic Masala Chai, and soothing Herbal
