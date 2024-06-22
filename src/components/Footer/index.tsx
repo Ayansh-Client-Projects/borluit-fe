@@ -25,7 +25,7 @@ const Footer = () => {
         <LogoSVG />
         <p className="font-satoshi tracking-wider text-white">
           Borluit Tea is dedicated to bringing the rich heritage and exquisite
-          flavors of Assam to tea lovers around the world.
+          flavours of Assam to tea lovers around the world.
         </p>
       </section>
       <section className="flex justify-between pt-8 lg:gap-32">
@@ -55,7 +55,7 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="font-jost h-14 w-36 rounded-2xl bg-honey font-medium text-white hover:opacity-60"
+            className="h-14 w-36 rounded-2xl bg-honey font-jost font-medium text-white hover:opacity-60"
             style={{
               transition: "opacity ease-in 300ms",
             }}
@@ -64,7 +64,7 @@ const Footer = () => {
           </button>
         </form>
       </section>
-      <p className="font-jost absolute bottom-6 font-medium tracking-wider text-white">
+      <p className="absolute bottom-6 font-jost font-medium tracking-wider text-white">
         ©2024 borluittea
       </p>
     </section>

@@ -39,7 +39,7 @@ const Card = (props: { classes: string }) => {
       </h2>
       <p className="text-justify font-satoshi tracking-wider text-perrywinkle">
         Founded in 2015, Borluit Tea is dedicated to bringing the rich heritage
-        and exquisite flavors of Assam to tea lovers around the world. Our
+        and exquisite flavours of Assam to tea lovers around the world. Our
         journey began with a passion for sharing the finest teas, handpicked
         from the lush tea gardens of Assam, known for producing some of the
         world&apos;s most exceptional teas.
