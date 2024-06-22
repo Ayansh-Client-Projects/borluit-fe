@@ -72,7 +72,7 @@ const OurProducts = () => {
           spice-infused aftertaste that comforts and invigorates.
         </p>
       </div>
-      <div className="relative sm:mt-16 sm:h-[448px] lg:w-[1380px]">
+      <div className="relative sm:mt-16 sm:h-[448px] lg:w-[90%]">
         <Carousel
           responsive={responsive}
           swipeable={true}

@@ -38,9 +38,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.95]">
+      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.95] lg:px-32">
         <a href="#">
-          <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[55.72px] lg:w-[116.90px] lg:translate-x-[-20px]" />
+          <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[55.72px] lg:w-[116.90px]" />
         </a>
         <div className="lg:hidden">
           <button
@@ -54,7 +54,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <ul className="hidden flex-row gap-x-24 lg:flex">
+        <ul className="hidden w-[70%] flex-row justify-between lg:flex">
           {links.map((link) => (
             <li key={link.title}>
               <Anchor link={link} />

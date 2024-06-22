@@ -85,7 +85,7 @@ export const ButtonGroup = ({
   previous?: () => void;
 }) => {
   return (
-    <div className="hidden lg:absolute lg:top-[calc(50%-2rem)] lg:flex lg:w-[105%] lg:-translate-x-[2.5%] lg:justify-between">
+    <div className="hidden lg:absolute lg:top-[calc(50%-2rem)] lg:flex lg:w-[108%] lg:-translate-x-[3.7%] lg:justify-between">
       <button
         className={clsx(styles.button)}
         onClick={() => previous && previous()}
@@ -134,7 +134,7 @@ const Card = ({
   product: string;
 }) => {
   return (
-    <div className="mx-4 flex h-72 flex-col items-center justify-between gap-y-4 rounded-2xl bg-white px-4 py-6 sm:h-64 lg:mx-8">
+    <div className="lg:m6-8 mx-4 flex h-72 flex-col items-center justify-between rounded-2xl bg-white px-4 py-6 sm:h-64">
       <p className="pb-4 sm:pb-7 sm:pt-2">
         <span
           className={`relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-palanquin before:font-semibold before:tracking-[0.15em] before:text-perrywinkle before:opacity-20 before:content-["''"]`}
