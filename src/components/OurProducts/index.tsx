@@ -51,7 +51,7 @@ const OurProducts = () => {
         <p className="text-justify font-satoshi tracking-wider text-perrywinkle lg:text-center">
           <span className="text-md font-jost">Assam Tea:</span> Awaken your
           senses with the full-bodied richness of our Assam Tea. This bold brew
-          boasts a deep amber color and a robust, malty flavour profile. Its
+          boasts a deep amber colour and a robust, malty flavour profile. Its
           smooth, velvety texture coats the palate, while the brisk,
           invigorating finish makes it the perfect companion to greet the dawn.
         </p>
