@@ -5,7 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/svg/logosingle-white-bg.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Discover Borluit Tea's premium Assam blends. Enjoy rich flavours and aromas. Shop our loose-leaf & tea bags, sourced directly from Assam's finest gardens.">
-    <meta name="google-site-verification" content="1Z3Vwa6eACvFxZF3ypjuBrQZn8ZtDy0SkQ5MB9ZsSuc" />
     <title>Borluit Tea</title>
   </head>
   <body>
@@ -20,6 +19,16 @@
     <form name='newsletter-form' netlify hidden>
       <input type='email' name='newsletter-email' />
     </form>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJM75KB8H2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GJM75KB8H2');
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
