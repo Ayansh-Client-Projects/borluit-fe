@@ -38,11 +38,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-center gap-x-56 bg-[#F0F0F0] shadow-md lg:h-28 lg:justify-center lg:gap-x-96 lg:bg-white/[0.95]">
-        <a href="#">
-          <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[46.43px] lg:w-[97.42px]" />
-        </a>
-        <div className="lg:hidden">
+      <nav className="fixed top-0 z-50 flex h-14 w-full flex-row items-center justify-between bg-[#F0F0F0] px-6 shadow-md lg:h-28 lg:bg-white/[0.95] lg:px-32">
+        <div className="lg:w-[20%]">
+          <a href="#">
+            <LogoSVG className="h-[34.77px] w-[71.96px] lg:h-[55.72px] lg:w-[116.90px]" />
+          </a>
+        </div>
+        <div className="lg:hidden lg:w-0">
           <button
             className="navbar-burger flex items-center"
             onClick={handleShowMenu}
@@ -54,7 +56,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <ul className="hidden flex-row gap-x-24 lg:flex">
+        <ul className="hidden flex-row justify-between lg:flex lg:w-[55%]">
           {links.map((link) => (
             <li key={link.title}>
               <Anchor link={link} />
@@ -62,17 +64,20 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      {showMenu && (
-        <ul
-          className={`fixed top-0 z-40 flex h-screen w-screen flex-col items-center gap-y-16 bg-[#F0F0F0] pt-28 lg:hidden`}
-        >
-          {links.map((link) => (
+
+      <ul
+        className={`fixed top-0 z-40 flex ${showMenu ? "h-screen pb-10 pt-24" : "h-0"} w-screen flex-col items-center gap-y-8 bg-[#F0F0F0] lg:hidden`}
+        style={{
+          transition: "all ease-in-out 200ms",
+        }}
+      >
+        {showMenu &&
+          links.map((link) => (
             <li key={link.title}>
               <Anchor link={link} onClick={handleNavigate} />
             </li>
           ))}
-        </ul>
-      )}
+      </ul>
     </>
   );
 };
@@ -82,7 +87,7 @@ const Anchor = (props: { link: Link; onClick?: () => void }) => {
     <a
       onClick={props.onClick ?? undefined}
       href={props.link.href}
-      className="font-display font-medium uppercase text-gray-800 hover:text-perrywinkle"
+      className="font-jost font-medium uppercase text-gray-800 hover:text-perrywinkle"
       style={{
         transition: "color ease-in 300ms",
       }}

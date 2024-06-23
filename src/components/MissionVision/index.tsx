@@ -10,7 +10,7 @@ const circularCardTexts = [
 
 const MissionVision = () => {
   const textClasses =
-    "text-perrywinkle text-center font-display font-medium tracking-wider lg:max-w-[920px] lg:text-center";
+    "text-perrywinkle text-center font-jost font-medium tracking-wider lg:max-w-[920px] lg:text-center";
 
   return (
     <section
@@ -22,17 +22,11 @@ const MissionVision = () => {
       <section className="space-y-9">
         <Card header="Our Vision">
           <p className={textClasses}>
-            Our{" "}
-            <span
-              className={`relative before:absolute before:left-1/2 before:top-0 before:block before:-translate-x-1/2 before:-translate-y-6 before:rotate-180 before:scale-[6] before:font-palanquin before:font-semibold before:tracking-[0.15em] before:text-canopy before:opacity-10 before:content-["''"]`}
-            >
-              vision
-            </span>{" "}
-            at Borluit Tea is to be the global ambassador of Assam&apos;s rich
-            tea heritage, offering exceptional and sustainable tea experiences
-            to the world. We aim to inspire and delight tea lovers with our
-            high-quality, ethically sourced teas, celebrating tradition and
-            promoting wellness.
+            Our vision at Borluit Tea is to be the global ambassador of
+            Assam&apos;s rich tea heritage, offering exceptional and sustainable
+            tea experiences to the world. We aim to inspire and delight tea
+            lovers with our high-quality, ethically sourced teas, celebrating
+            tradition and promoting wellness.
           </p>
         </Card>
       </section>
@@ -71,7 +65,7 @@ const Card = (props: { header: string; children: ReactElement }) => {
     <section className="space-y-9">
       <h2
         className={clsx(
-          "relative text-center font-display text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
+          "font-jost relative text-center text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
           content,
         )}
       >
@@ -109,7 +103,7 @@ const CardCircular = (props: {
   return (
     <div
       className={clsx(
-        "group grid size-[250px] place-items-center rounded-full border-4 border-[#55634b2f] border-opacity-30 px-4 text-center hover:bg-[#55634ba5] hover:bg-opacity-95 lg:size-[300px]",
+        "group grid size-[250px] place-items-center rounded-full border-2 border-[#55634b2f] border-opacity-30 px-8 text-center hover:bg-[#55634ba5] hover:bg-opacity-95 sm:px-12 lg:size-[300px]",
         translateClass,
       )}
       style={{

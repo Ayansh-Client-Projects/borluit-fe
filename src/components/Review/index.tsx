@@ -13,7 +13,7 @@ const Review = () => {
       )}
     >
       <Header title="What our customers are saying" />
-      <div className="relative mt-8 lg:w-[1200px]">
+      <div className="relative mt-8 lg:w-[95%]">
         <TestmonialCarousel />
       </div>
     </section>

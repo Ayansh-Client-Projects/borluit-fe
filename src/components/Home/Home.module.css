@@ -1,8 +1,11 @@
 @media screen and (max-width: 600px) {
   .background-slide {
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: slideIn;
     animation-fill-mode: forwards;
+    p {
+      mix-blend-mode: difference;
+    }
   }
 
   .content-slide {
@@ -26,10 +29,10 @@
 
 @keyframes slideIn {
   from {
-    background-position: top 0px left 75%;
+    background-position: top 50px left 63%;
   }
   to {
-    background-position: top 0px left 55%;
+    background-position: top 50px left 57%;
   }
 }
 
@@ -46,18 +49,18 @@
 
 @keyframes slideUp {
   from {
-    transform: translateY(50%);
+    transform: translateY(30%) scale(0.95);
   }
   to {
-    transform: translateY(0%);
+    transform: translateY(10%) scale(1);
   }
 }
 
 @keyframes slideDown {
   from {
-    background-position: top 100% right;
+    background-position: top 65% right;
   }
   to {
-    background-position: top 0% right;
+    background-position: top 40% right;
   }
 }

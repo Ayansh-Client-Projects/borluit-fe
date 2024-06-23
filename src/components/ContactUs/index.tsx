@@ -15,7 +15,7 @@ const ContactUs = () => {
         styles["background-mask"],
       )}
     >
-      <h2 className="font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-center lg:text-4xl">
+      <h2 className="font-jost text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-center lg:text-4xl">
         contact us
       </h2>
       <section className="lg:flex lg:flex-row-reverse lg:justify-between lg:pt-16">
@@ -34,22 +34,43 @@ const MyForm = () => {
       data-netlify="true"
       className="space-y-4 pt-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0 lg:pt-0"
     >
-      <input type='hidden' name='form-name' value='contact-us-form' />
-      <MyInput icon={<UserIcon />} placeholder="Name" name="name"  required={true}  />
-      <MyInput icon={<BoxIcon />} placeholder="Product Looking For" name="product"  required={true} />
-      <MyInput icon={<PhoneIcon />} placeholder="Phone Number" name="phone-number"  required={true} />
-      <MyInput icon={<EmailIcon />} placeholder="Email" type={"email"} name="email"  required={true} />
+      <input type="hidden" name="form-name" value="contact-us-form" />
+      <MyInput
+        icon={<UserIcon />}
+        placeholder="Name"
+        name="name"
+        required={true}
+      />
+      <MyInput
+        icon={<BoxIcon />}
+        placeholder="Product Looking For"
+        name="product"
+        required={true}
+      />
+      <MyInput
+        icon={<PhoneIcon />}
+        placeholder="Phone Number"
+        name="phone-number"
+        required={true}
+      />
+      <MyInput
+        icon={<EmailIcon />}
+        placeholder="Email"
+        type={"email"}
+        name="email"
+        required={true}
+      />
       <div className="col-span-2 flex min-h-[140px] gap-x-4 rounded-[4px] bg-white p-4">
         <textarea
           name="message"
-          required={true} 
+          required={true}
           placeholder="Your Message"
-          className="flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
+          className="flex-1 font-jost font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         />
       </div>
       <button
         type="submit"
-        className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
+        className="h-14 w-36 rounded-2xl bg-honey font-jost font-medium text-white hover:opacity-60"
         style={{
           transition: "opacity ease-in 300ms",
         }}
@@ -79,7 +100,7 @@ export const MyInput = ({
           props.name?.toLocaleLowerCase() ?? props.placeholder.toLowerCase()
         }
         type={type}
-        className="w-auto flex-1 font-display font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
+        className="w-auto flex-1 font-jost font-medium tracking-wider text-perrywinkle placeholder-perrywinkle"
         placeholder={props.placeholder}
         required={required}
       />
@@ -92,13 +113,13 @@ const ContactSection = () => {
     <section className="mt-6 space-y-6 lg:mt-0 lg:space-y-12">
       <ContactUnit
         title="Customer Care"
-        line1="Phone No : +91-6000644486 (8 am to 9 pm)"
+        line1="Phone No : +91-6000644486 (8am to 9pm)"
         line2="Email : borluittea@gmail.com"
       />
       <ContactUnit
         title="Borluit Tea House"
-        line1="1st Floor, AAC Complex, S. J Road, Athgaon,"
-        line2="Guwahati- 781001, Assam, India"
+        line1="1st Floor, AAC Commercial Complex, S.J Road,"
+        line2="Athgaon, Guwahati- 781001, Assam, India"
       />
       <ContactUnit
         title="Sales related queries / Complaints"
@@ -116,15 +137,11 @@ const ContactUnit = (props: {
 }) => {
   return (
     <div>
-      <h3 className="pb-4 font-display text-2xl font-medium tracking-widest text-wine lg:font-semibold">
+      <h3 className="pb-4 font-jost text-2xl font-medium tracking-wide text-wine lg:font-semibold">
         {props.title}
       </h3>
-      <p className="font-satoshi tracking-wider text-perrywinkle">
-        {props.line1}
-      </p>
-      <p className="font-satoshi tracking-wider text-perrywinkle">
-        {props.line2}
-      </p>
+      <p className="font-satoshi text-perrywinkle">{props.line1}</p>
+      <p className="font-satoshi text-perrywinkle">{props.line2}</p>
     </div>
   );
 };

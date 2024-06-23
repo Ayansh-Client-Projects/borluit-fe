@@ -25,7 +25,7 @@ const Footer = () => {
         <LogoSVG />
         <p className="font-satoshi tracking-wider text-white">
           Borluit Tea is dedicated to bringing the rich heritage and exquisite
-          flavors of Assam to tea lovers around the world.
+          flavours of Assam to tea lovers around the world.
         </p>
       </section>
       <section className="flex justify-between pt-8 lg:gap-32">
@@ -37,7 +37,7 @@ const Footer = () => {
         />
       </section>
       <section className="space-y-4 pt-8">
-        <h3 className="font-display font-medium uppercase tracking-wider text-[#D8BB7B]">
+        <h3 className="font-jost font-medium uppercase tracking-wider text-[#D8BB7B]">
           newsletter
         </h3>
         <form
@@ -46,11 +46,16 @@ const Footer = () => {
           data-netlify="true"
           className="space-y-4 lg:flex lg:gap-8 lg:space-y-0"
         >
-          <input type='hidden' name='form-name' value='newsletter-form' />
-          <MyInput type="email" placeholder="Enter your email address" name="newsletter-email" required={true} />
+          <input type="hidden" name="form-name" value="newsletter-form" />
+          <MyInput
+            type="email"
+            placeholder="Enter your email address"
+            name="newsletter-email"
+            required={true}
+          />
           <button
             type="submit"
-            className="h-14 w-36 rounded-2xl bg-honey font-display font-medium text-white hover:opacity-60"
+            className="h-14 w-36 rounded-2xl bg-honey font-jost font-medium text-white hover:opacity-60"
             style={{
               transition: "opacity ease-in 300ms",
             }}
@@ -59,7 +64,7 @@ const Footer = () => {
           </button>
         </form>
       </section>
-      <p className="absolute bottom-6 font-display font-medium tracking-wider text-white">
+      <p className="absolute bottom-6 font-jost font-medium tracking-wider text-white">
         ©2024 borluittea
       </p>
     </section>
@@ -75,7 +80,7 @@ const ListSection = ({
   title: string;
   openLinkBlank?: boolean;
 }) => {
-  const textClasses = "font-display font-medium uppercase tracking-wider";
+  const textClasses = "font-jost font-medium uppercase tracking-wider";
 
   return (
     <div className="space-y-4">

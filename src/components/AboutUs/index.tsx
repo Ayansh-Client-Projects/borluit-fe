@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import styles from "./AboutUs.module.css";
-import TeaGarden from "@/assets/img/branded-tea.jpg";
+import TeaGarden from "@/assets/img/about-us-tea-estate.webp";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
@@ -19,12 +19,12 @@ const AboutUs = () => {
           whileInView={{ objectPosition: "30%" }}
           viewport={{ margin: "0px 0px 0px 0px", once: true, amount: "all" }}
           src={TeaGarden}
-          className="w-full object-cover lg:hover:translate-x-1 lg:hover:translate-y-1 lg:hover:scale-[1.015]"
+          className="w-full object-cover lg:-translate-x-28 lg:hover:-translate-x-[6.5rem] lg:hover:translate-y-1 lg:hover:scale-[1.015]"
           style={{
             transition: "transform ease-in 300ms",
           }}
         />
-        <Card classes="hidden lg:absolute lg:block lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:translate-x-1/2 lg:max-w-[490px] lg:p-14 " />
+        <Card classes="hidden lg:absolute lg:block lg:top-1/2 lg:-translate-y-1/2 lg:-right-32  lg:max-w-[550px] lg:p-14 " />
       </section>
       <Card classes="flex-1 lg:hidden" />
     </section>
@@ -34,20 +34,22 @@ const AboutUs = () => {
 const Card = (props: { classes: string }) => {
   return (
     <section className={clsx("space-y-4 bg-white px-6 py-8", props.classes)}>
-      <h2 className="font-display text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
+      <h2 className="font-jost text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
         About Us
       </h2>
       <p className="text-justify font-satoshi tracking-wider text-perrywinkle">
         Founded in 2015, Borluit Tea is dedicated to bringing the rich heritage
-        and exquisite flavors of Assam to tea lovers around the world. Our
+        and exquisite flavours of Assam to tea lovers around the world. Our
         journey began with a passion for sharing the finest teas, handpicked
         from the lush tea gardens of Assam, known for producing some of the
         world&apos;s most exceptional teas.
-        <br />
+        <span className="block pb-2" />
         At Borluit Tea, we believe in preserving tradition while embracing
-        innovation. Our carefully curated collection includes robust Assam Black
-        Tea, refreshing Assam Green Tea, aromatic Masala Chai, delicate Assam
-        White Tea, and soothing Herbal Infusions.
+        innovation. Our carefully curated collection includes robust Assam Tea,
+        refreshing Green Tea, aromatic Masala Chai, and soothing Herbal
+        Infusions. Our Herbal Infusions combine the finest Assam tea with
+        carefully selected herbs, creating a calming and aromatic journey
+        perfect for relaxation and well-being.
       </p>
     </section>
   );
