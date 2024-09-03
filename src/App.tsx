@@ -7,7 +7,7 @@ import CSPage from "@page/c-s";
 import ReviewPage from "@page/review";
 import ContactUs from "@components/ContactUs";
 import Footer from "./components/Footer";
-
+import Courtesy from "./components/Courtesy";
 const App = () => {
   return (
     <>
@@ -20,6 +20,7 @@ const App = () => {
       <ReviewPage />
       <ContactUs />
       <Footer />
+      <Courtesy />
     </>
   );
 };

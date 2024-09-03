@@ -18,7 +18,8 @@ export default {
 				'canopy': '#55634B',
 				'perrywinkle': '#687D9B',
 				'wine': '#694451',
-				'honey': '#C1892C'
+				'honey': '#C1892C',
+				'neonbg':"#dbfe52"
 			}
 		},
   },
