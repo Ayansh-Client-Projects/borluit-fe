@@ -25,11 +25,12 @@ const Hero = () => {
         <br /> Tradition & Care
       </h1>
       <p className="font-satoshi tracking-wider text-perrywinkle lg:text-[#303030]">
-        Elevate your tea experience with Borluit Tea, where tradition meets
-        innovation.{" "}
+        Elevate your Assam tea experience with Borluit Tea, where tradition
+        meets innovation{" "}
         <span className="hidden sm:inline">
-          Sourced from one of the finest tea growing regions in the world.
-          Discover the art of tea with Borluit Tea.
+          sourced from one of the finest Assam tea garden , one of the world's
+          highly recommended regions. Discover the art of tea with Borluit Tea.
+          Buy Tea online from us, one of the best Assam tea sellers.
         </span>
       </p>
       <a
