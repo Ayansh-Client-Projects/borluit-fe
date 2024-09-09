@@ -87,7 +87,7 @@ const CSComp = () => {
                 key={item.text.slice(0, 5)}
                 className="relative grid w-full place-items-center space-y-2"
               >
-                <p className="font-jost text-center text-5xl font-bold tracking-wide text-honey lg:text-6xl">
+                <p className="text-center font-jost text-5xl font-bold tracking-wide text-honey lg:text-6xl">
                   {item.count}
                 </p>
                 <p className="text-center font-satoshi font-semibold tracking-wide text-wine">
@@ -107,7 +107,7 @@ const CSComp = () => {
 
 export const Header = (props: { title: string }) => {
   return (
-    <h2 className="font-jost text-center text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
+    <h2 className="text-center font-jost text-2xl font-semibold uppercase tracking-widest text-canopy lg:text-4xl">
       {props.title}
     </h2>
   );
@@ -119,7 +119,7 @@ const Badge = (props: { icon: ReactElement; title: string }) => {
       <div className="grid size-[100px] place-items-center rounded-full bg-canopy">
         {props.icon}
       </div>
-      <p className="font-jost text-center text-lg font-medium tracking-wide text-wine">
+      <p className="text-center font-jost text-lg font-medium tracking-wide text-wine">
         {props.title}
       </p>
     </>

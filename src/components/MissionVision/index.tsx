@@ -3,9 +3,9 @@ import { ReactElement } from "react";
 import styles from "./MissionVision.module.css";
 
 const circularCardTexts = [
+  "Implement sustainable farming and production practices to minimize environmental impact and promote a healthier planet.",
   "Craft exceptional teas that showcase the rich and diverse heritage of Assam's tea traditions.",
-  "Partner with local growers, ensuring fair wages and supporting community development.",
-  "Implement sustainable farming and production practices to promote a healthier planet.",
+  "Partner with local growers, ensuring fair wages and supporting community development through education and healthcare initiatives.",
 ];
 
 const MissionVision = () => {
@@ -26,7 +26,9 @@ const MissionVision = () => {
             Assam&apos;s rich tea heritage, offering exceptional and sustainable
             tea experiences to the world. We aim to inspire and delight tea
             lovers with our high-quality, ethically sourced teas, celebrating
-            tradition and promoting wellness.
+            tradition and promoting wellness.By supporting local communities and
+            practicing sustainable sourcing, we strive to make a positive impact
+            on both people and the planet.
           </p>
         </Card>
       </section>
@@ -65,7 +67,7 @@ const Card = (props: { header: string; children: ReactElement }) => {
     <section className="space-y-9">
       <h2
         className={clsx(
-          "font-jost relative text-center text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
+          "relative text-center font-jost text-2xl font-semibold uppercase tracking-wider text-canopy before:absolute before:left-1/2 before:block before:-translate-x-1/2 before:scale-[2] before:text-[1.35rem] before:opacity-10 lg:text-4xl lg:before:text-4xl",
           content,
         )}
       >

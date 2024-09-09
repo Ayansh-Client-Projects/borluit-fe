@@ -14,6 +14,7 @@ const AboutUs = () => {
     >
       <section className="flex flex-1 basis-[456px] lg:relative lg:h-[576px] lg:w-[975px]">
         <motion.img
+          alt="Preserving Assam's Heritage Through Tea"
           initial={{ objectPosition: "60%" }}
           transition={{ duration: 1 }}
           whileInView={{ objectPosition: "30%" }}
@@ -45,11 +46,9 @@ const Card = (props: { classes: string }) => {
         world&apos;s most exceptional teas.
         <span className="block pb-2" />
         At Borluit Tea, we believe in preserving tradition while embracing
-        innovation. Our carefully curated collection includes robust Assam Tea,
-        refreshing Green Tea, aromatic Masala Chai, and soothing Herbal
-        Infusions. Our Herbal Infusions combine the finest Assam tea with
-        carefully selected herbs, creating a calming and aromatic journey
-        perfect for relaxation and well-being.
+        innovation. Our carefully curated collection includes robust Assam Black
+        Tea, refreshing Assam Green Tea, aromatic Masala Chai, delicate Assam
+        White Tea, and soothing Herbal Infusions.
       </p>
     </section>
   );
